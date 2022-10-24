@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+   double x, y, z,t;
+   scanf("%lf %lf %lf", &x, &y, &z );
+   double modul = fabs(x-y);
+   t = (exp(modul)*pow(modul, x+y))/(atan(x)+atan(z));
+   double koren = pow(pow(x,6)+pow(log(y),2),1.0/3);
+   double otv = t + koren;
+   printf("%.6lf", otv);
+
+    return 0;
+}

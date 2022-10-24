@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a;
+    int b, napr;
+    scanf("%c %d", &a, &b);
+    switch(a){
+        case 's':
+        napr = 1;
+        break;
+        case 'u':
+        napr = 3;
+        break;
+        case 'v':
+        napr = 2;
+        break;
+        case 'z':
+        napr = 4;
+        break;
+    }
+    napr = napr + b;
+    if (napr > 4)
+    napr = 1;
+    if (napr < 1)
+    napr = 4;
+    switch(napr){
+        case 1:
+        printf("s");
+        break;
+        case 2:
+        printf("v");
+        break;
+        case 3:
+        printf("u");
+        break;
+        case 4:
+        printf("z");
+        break;
+    }
+    return 0;
+}
