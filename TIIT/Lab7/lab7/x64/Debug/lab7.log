@@ -1,4 +1,0 @@
-﻿  lab7.cpp
-C:\Users\lesha\OneDrive\Рабочий стол\univer\tiit\Lab7\lab7\lab7.cpp(69,25): warning C4244: =: преобразование "__int64" в "char", возможна потеря данных
-C:\Users\lesha\OneDrive\Рабочий стол\univer\tiit\Lab7\lab7\lab7.cpp(76,25): warning C4244: =: преобразование "__int64" в "char", возможна потеря данных
-  lab7.vcxproj -> C:\Users\lesha\OneDrive\Рабочий стол\univer\tiit\Lab7\lab7\x64\Debug\lab7.exe
