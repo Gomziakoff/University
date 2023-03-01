@@ -2,6 +2,7 @@
 #include <string>
 #include <windows.h>
 #include <iomanip>
+#include <sstream>
 using namespace std;
 
 enum Proizv {Belarus = 1, Russia, Lituania, Ukraine};
@@ -67,28 +68,36 @@ void input(book*& array, int &N)
 
 void output(book* array, int N) 
 {
+	cout << setw(10) << "№";
+	cout << setw(25) << "name:";
+	cout << setw(25) << "author:";
+	cout <<setw(25) << "publisher:";
+	cout << setw(25) << "year:";
+	cout << setw(25) << "pages:";
+	cout << setw(25) << "made in";
+	cout << setw(25) << "are in stock" << endl;
 	for (int i = 0; i < N; i++) {
-		cout << "№" << array[i].reg << "; ";
-		cout << "Название: " << array[i].name << "; ";
-		cout << "Автор: " << array[i].author << "; ";
-		cout << "Издательство: " << array[i].izdat << "; ";
-		cout << "Год выпуска: " << array[i].year << "; ";
-		cout << "Кол-во страниц: " << array[i].pages << "; ";
+		cout << setw(10) << array[i].reg;
+		cout << setw(25) << array[i].name;
+		cout << setw(25) << array[i].author;
+		cout << setw(25) << array[i].izdat;
+		cout << setw(25) << array[i].year;
+		cout << setw(25) << array[i].pages;
 		switch (array[i].proizv) {
 		case Belarus:
-			cout << "Поставщик: " << "Беларусь" << "; ";
+			cout << setw(25) << "Беларусь" ;
 			break;
 		case Russia:
-			cout << "Поставщик: " << "Россия" << "; ";
+			cout << setw(25) << "Россия" ;
 			break;
 		case Lituania:
-			cout << "Поставщик: " << "Литва" << "; ";
+			cout << setw(25) << "Литва" ;
 			break;
 		case Ukraine:
-			cout << "Поставщик: " << "Украина" << "; ";
+			cout << setw(25) << "Украина" ;
 			break;
 		}
-		cout << "Есть в наличии: " << array[i].nal.access << "; ";
+		cout << setw(25) << array[i].nal.access;
 		cout << endl;
 	}
 }
@@ -105,11 +114,11 @@ void sort(book*& array, int N) //sort by year
 
 void search(book* array, int N) //search books after X year
 {
-	int find;
+	int fond;
 	cout << "Введите книги с какого года вам показать?\n";
-	cin >> find;
+	cin >> fond;
 	for (int i = 0; i < N; i++) {
-		if (array[i].year >= find) {
+		if (array[i].year >= fond) {
 			cout << "№" << array[i].reg << "; ";
 			cout << "Название: " << array[i].name << "; ";
 			cout << "Автор: " << array[i].author << "; ";
@@ -136,7 +145,7 @@ void search(book* array, int N) //search books after X year
 	}
 }
 
-void deleted(book* array, int& N) {
+void deleted(book*& array, int& N) {
 	int find;
 	output(array, N);
 	cout << "Введите номер книги которую нужно удалить: ";
@@ -148,7 +157,6 @@ void deleted(book* array, int& N) {
 				array[j] = array[j + 1];
 			i--;
 		}
-		break;
 	}
 }
 
