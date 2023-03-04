@@ -1,1 +1,2 @@
 C:\Users\lesha\OneDrive\Рабочий стол\tmois\tmois3\x64\Debug\tmois3.exe
+D:\progr\github\University\tmois\lab1\tmois3\x64\Debug\tmois3.exe
