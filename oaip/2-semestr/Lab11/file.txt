@@ -1,1 +1,6 @@
        №                    name:                  author:               publisher:                    year:                   pages:                  made in             are in stock
+         1                        1                        1                        1                        1                        1         Беларусь                        +
+         2                        2                        2                        2                        2                        2             Россия                        -
+         3                        3                        3                        3                        3                        3               Литва                        -
+         4                        4                        4                        4                        4                        4           Украина                        -
+         5                        1                        1                        1                        1                        1         Беларусь                        +
