@@ -1,0 +1,2 @@
+﻿  lab2.cpp
+D:\progr\github\University\tmois\lab2\lab2.cpp(118): error C4700: использована неинициализированная локальная переменная "target"
