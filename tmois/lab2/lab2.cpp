@@ -2,26 +2,32 @@
 
 using namespace std;
 
-int binsearch(int* a, int n) {
-	int target;
-	cin >> target;
+int binsearch(int* a, int n, int target) {
+	int middle, found;
+	int iter = 0;
 	int left = 0, right = n - 1;
 	if (a[left] > target) {
+		cout << "bin iter =" << iter << endl;
 		return 0;
 	}
 	if (a[right] < target) {
+		cout << "bin iter =" << iter << endl;
 		return right + 1;
 	}
 	while (true) {
-		int middle = (left + right) / 2;
-		int found = a[middle];
+		iter++;
+		 middle = (left + right) / 2;
+		 found = a[middle];
 		if (found == target) {
+			cout << "bin iter =" << iter << endl;
 			return middle;
 		}
 		if (middle == left) {
 			if (a[right] == target) {
+				cout << "bin iter =" << iter << endl;
 				return right;
 			}
+			cout << "bin iter =" << iter << endl;
 			return middle + 1;
 		}
 		if (found < target) {
@@ -34,95 +40,68 @@ int binsearch(int* a, int n) {
 }
 
 int interpol(int* a, int n, int target) {
-	int target;
-	cin >> target;
+	int iter = 0;
 	int found = -1, low = 0, high = n - 1;
 	while (a[low]<target && a[high]>target) {
+		iter++;
 		int mid = low + (target - a[low]) * (high - low) / (a[high] - a[low]);
 		if (a[mid] < target) {
-			low = mid++;
+			low = mid+1;
 		}
-		else if (a[mid]>target) {
+		else if (a[mid] > target) {
 			high = mid - 1;
 		}
 		else {
+			cout << "interpolation iter =" << iter << endl;
 			return mid;
 		}
-	}
-	if (a[low] = target) {
-		return low;
-	}
-	if (a[high] < target) {
-		return high;
-	}
-	else {
-		return -1;
+		if (a[low] = target) {
+			cout << "interpolation iter =" << iter << endl;
+			return low;
+		}
+		if (a[high] < target) {
+			cout << "interpolation iter =" << iter << endl;
+			return high;
+		}
+		else {
+			return -1;
+		}
 	}
 }
 
-void merge(int* a, int n)
-{
-	int mid = n / 2;
-	if (n % 2 == 1)
-		mid++;
-	int h = 1;
-	int* c = new int[n];
-	int step;
-	while (h < n)
-	{
-		step = h;
-		int i = 0;
-		int j = mid;
-		int k = 0;
-		while (step <= mid)
-		{
-			while ((i < step) && (j < n) && (j < (mid + step)))
-			{
-				if (a[i] < a[j])
-				{
-					c[k] = a[i];
-					i++; k++;
-				}
-				else {
-					c[k] = a[j];
-					j++; k++;
-				}
-			}
-			while (i < step)
-			{ 
-				c[k] = a[i];
-				i++; k++;
-			}
-			while ((j < (mid + step)) && (j < n))
-			{ 
-				c[k] = a[j];
-				j++; k++;
-			}
-			step = step + h; 
-		}
-		h = h * 2;
-		for (i = 0; i < n; i++)
-			a[i] = c[i];
-	}
-}
+
 
 int main() {
 	int n, target;
+	cout << "inter number of elements\n";
 	cin >> n;
 	int* a = new int[n];
+	cout << "enter numbers\n";
 	for (int i = 0; i < n; i++) {
 		cin >> a[i];
 	}
-	merge(a, n);
+	cout << "enter target element\n";
+	cin >> target;
 	int choise;
+	cout << "enter choise\n";
 	cin >> choise;
 	switch (choise)
 	{
 	case 1:
-		binsearch(a, n);
+		cout << binsearch(a, n, target);
 		break;
 	case 2:
-		interpol(a, n);
+		cout << interpol(a, n, target);
+		break;
+	case 3:
+		cout << binsearch(a, n, target)<<endl;
+		cout << interpol(a, n, target)<<endl;
+		break;
+	case 4:
+		mergesort(a, 0, n);
+		for (int i = 0; i < n; i++) {
+			cout << a[i];
+		}
 		break;
 	}
 	

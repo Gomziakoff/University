@@ -1,5 +1,5 @@
        №                    name:                  author:               publisher:                    year:                   pages:                  made in             are in stock
-         1                        1                        1                        1                        1                        1         Беларусь                        +
-         3                        3                        3                        3                     1980                        3               Литва                        -
-         2                        2                        2                        2                     2000                      456         Беларусь                        +
-         4                        4                        4                        4                     2022                      345               Литва                        +
+         4                      hjy                      dgr                        t                     1879                      256             Россия                        +
+         2                      fgt                      dvb                      djn                     1987                      256             Россия                        +
+         1                      qwe                      asd                      qaz                     2005                      300         Беларусь                        +
+         3                      dcv                     sdfg                     sffg                     2022                      157           Украина                        -

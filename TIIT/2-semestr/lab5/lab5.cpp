@@ -7,6 +7,7 @@ using namespace std;
 
 
 int main() {
+	srand(time(NULL));
 	vector<double> data = {0};
 	int ill, day = 1, contacts, dead = 0, cured = 0;
 	ill = frand(5, 10);

@@ -1,2 +1,4 @@
 ﻿  lab2.cpp
-D:\progr\github\University\tmois\lab2\lab2.cpp(118): error C4700: использована неинициализированная локальная переменная "target"
+D:\progr\github\University\tmois\lab2\lab2.cpp(109): warning C4717: mergesort: рекурсия на всех путях выполнения, функция вызовет переполнение стека
+D:\progr\github\University\tmois\lab2\lab2.cpp(70): warning C4715: interpol: значение возвращается не при всех путях выполнения
+  lab2.vcxproj -> D:\progr\github\University\tmois\lab2\x64\Debug\lab2.exe
