@@ -39,33 +39,80 @@ int binsearch(int* a, int n, int target) {
 	}
 }
 
-int interpol(int* a, int n, int target) {
+int interpol(int arr[], int n, int x) {
+	int lo = 0, hi = (n - 1);
 	int iter = 0;
-	int found = -1, low = 0, high = n - 1;
-	while (a[low]<target && a[high]>target) {
+	while (lo <= hi && x >= arr[lo] && x <= arr[hi]) {
 		iter++;
-		int mid = low + (target - a[low]) * (high - low) / (a[high] - a[low]);
-		if (a[mid] < target) {
-			low = mid+1;
-		}
-		else if (a[mid] > target) {
-			high = mid - 1;
-		}
-		else {
-			cout << "interpolation iter =" << iter << endl;
-			return mid;
-		}
-		if (a[low] = target) {
-			cout << "interpolation iter =" << iter << endl;
-			return low;
-		}
-		if (a[high] < target) {
-			cout << "interpolation iter =" << iter << endl;
-			return high;
-		}
-		else {
+		if (lo == hi) {
+			if (arr[lo] == x) return lo;
 			return -1;
 		}
+
+		int pos = lo + (((double)(hi - lo) / (arr[hi] - arr[lo])) * (x - arr[lo]));
+
+		if (arr[pos] == x) {
+			cout << "interpolation iter =" << iter << endl;
+			return pos;
+		}
+
+		if (arr[pos] > x)
+			hi = pos - 1;
+		else
+			lo = pos + 1;
+	}
+	return -1;
+}
+
+void merge(int arr[], int l, int m, int r) {
+	int i, j, k;
+	int n1 = m - l + 1;
+	int n2 = r - m;
+
+	int* L = new int[n1];
+	int* R = new int[n2];
+
+	for (i = 0; i < n1; i++)
+		L[i] = arr[l + i];
+	for (j = 0; j < n2; j++)
+		R[j] = arr[m + 1 + j];
+
+	
+	i = 0; 
+	j = 0; 
+	k = l; 
+	while (i < n1 && j < n2) {
+		if (L[i] <= R[j]) {
+			arr[k] = L[i];
+			i++;
+		}
+		else {
+			arr[k] = R[j];
+			j++;
+		}
+		k++;
+	}
+
+	while (i < n1) {
+		arr[k] = L[i];
+		i++;
+		k++;
+	}
+
+	while (j < n2) {
+		arr[k] = R[j];
+		j++;
+		k++;
+	}
+}
+
+void mergeSort(int arr[], int l, int r) {
+	if (l < r) {
+		int m = l + (r - l) / 2;
+
+		mergeSort(arr, l, m);
+		mergeSort(arr, m + 1, r);
+		merge(arr, l, m, r);
 	}
 }
 
@@ -98,13 +145,10 @@ int main() {
 		cout << interpol(a, n, target)<<endl;
 		break;
 	case 4:
-		mergesort(a, 0, n);
+		mergeSort(a, 0, n-1);
 		for (int i = 0; i < n; i++) {
-			cout << a[i];
+			cout << a[i] << " ";
 		}
 		break;
 	}
-	
-
-
 }
