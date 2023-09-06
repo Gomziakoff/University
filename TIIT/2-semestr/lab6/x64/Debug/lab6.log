@@ -1,9 +1,0 @@
-﻿  lab6.cpp
-D:\progr\github\University\TIIT\2-semestr\lab6\lab6.cpp(10,26): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-D:\progr\github\University\TIIT\2-semestr\lab6\lab6.cpp(18,28): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\progr\github\University\TIIT\2-semestr\lab6\lab6.cpp(21,28): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\progr\github\University\TIIT\2-semestr\lab6\lab6.cpp(24,30): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\progr\github\University\TIIT\2-semestr\lab6\lab6.cpp(27,30): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\progr\github\University\TIIT\2-semestr\lab6\lab6.cpp(30,29): warning C4244: +=: преобразование "double" в "int", возможна потеря данных
-D:\progr\github\University\TIIT\2-semestr\lab6\lab6.cpp(38,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  lab6.vcxproj -> D:\progr\github\University\TIIT\2-semestr\lab6\x64\Debug\lab6.exe

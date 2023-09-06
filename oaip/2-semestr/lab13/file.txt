@@ -1,4 +1,0 @@
-       №                    name:                  author:               publisher:                    year:                   pages:                  made in             are in stock
-         2                      edr                      fgh                      ygy                     1990                      400           Украина                        +
-         3                      rfg                      hjk                     vhvh                     2023                       34             Россия                        +
-         3                      qwe                      fgy                      yhj                     2323                      567             Россия                        +
