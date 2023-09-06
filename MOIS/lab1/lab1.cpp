@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <list>
+#include <fstream>
 
 using namespace std;
 
@@ -52,11 +53,10 @@ void Graph::BFS(int vertex, bool visited[])
 
 		for (i = adjLists[currVertex].begin(); i != adjLists[currVertex].end(); ++i)
 		{
-			int adjVertex = *i;
-			if (!visited[adjVertex])
+			if (!visited[*i])
 			{
-				visited[adjVertex] = true;
-				queue.push_back(adjVertex);
+				visited[*i] = true;
+				queue.push_back(*i);
 			}
 		}
 	}
@@ -73,9 +73,9 @@ int Graph::CCC() {
 
 	for (int i = 0; i < numvert; ++i) {
 		if (!visited[i]) {
-			DFS(i,visited);
-			// Или можно использовать BFS вместо DFS:
-			// BFS(i, visited);
+			// DFS(i,visited);
+			
+			 BFS(i, visited);
 			count++;
 		}
 	}
@@ -86,13 +86,22 @@ int Graph::CCC() {
 
 int main()
 {
-	Graph g(4);
-	g.addEdge(0, 0);
-	g.addEdge(2, 2);
-	g.addEdge(1, 1);
-	g.addEdge(2, 3);
+	ifstream inp("input.txt");
+	ofstream out("output.txt");
+	if (inp.is_open()) {
+		int numV, numAdj;
+		inp >> numV >> numAdj;
+		Graph g(numV);
+		for (int i = 0; i < numAdj; i++) {
+			int a, b;
+			inp >> a >> b;
+			g.addEdge(a, b);
+		}
+		cout << g.CCC();
+	}
+	else cout << "file not found";
 
-	cout << g.CCC();
+	
 
 	return 0;
 }
