@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float x, a, b;
+    scanf("%f %f", &a, &b);
+    x = a > b ? a/b+31 : a < b ? (a*5-1)/a:-25;
+    printf("%f", x);
+    return 0;
+}

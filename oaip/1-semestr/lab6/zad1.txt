@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <malloc.h>
+#include <stdlib.h>
+int main() {
+	int n, *a , del;
+	scanf("%d",&n);
+	a = (int*)malloc(n * sizeof(int));
+	for (int i = 0; i < n; i++) {
+		scanf("%d",&a[i]);
+	}
+for (int i = 0; i < n - 1; i++) 
+    for (int j = i + 1; j < n; j++) 
+    if (a[j] == a[j - 1]) 
+      { 
+      for (int k = j; k < n; k++){
+      a[k] = a[k + 1]; 
+      }
+      n--;
+      j--;
+    }   
+	for (int i = 0; i < n; i++) {
+		printf("%d ",a[i]);
+	}
+	printf("\nвведите какой элемент удалить ");
+	scanf("%d",&del);
+	for (int i = 0; i < n; i++){
+	    if (a[i] == del){
+	        for (int j = i;j<n;j++){
+	            a[j] = a[j+1];
+	        }
+	        n--;
+	    }
+	}
+	
+	for (int i = 0; i < n; i++) {
+		printf("%d ",a[i]);
+	}
+}

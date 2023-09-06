@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include <malloc.h>
+#include <stdlib.h>
+int
+main ()
+{
+  int n, max = -10;
+  int *a;
+  int b ;
+  scanf ("%d", &n);  
+  a = (int*)malloc((n+1)*n * sizeof(int));
+  b = n;
+  for (int i = 0; i < n; i++)
+    for (int j = 0; j < n; j++)
+      *(a+i*n+j)=rand()%100;
+  for (int i = 0; i < n; i++){
+    for (int j = 0; j < n; j++)
+      printf("%d ", *(a+i*n+j));
+      printf("\n");
+  }
+  //left up 
+  for (int i = 0; i < n - 1; i++){
+    for (int j = 0; j < b - 1; j++)
+      {
+        if (max <  *(a+i*n+j))
+         max =  *(a+i*n+j);
+      }
+      b--;
+  }
+  printf("left up %d\n",max);
+  max = -10;
+  b = n;
+  //left down
+  for (int i = 0; i < n ; i++){
+    for (int j = 0; j < b ; j++)
+      {
+          if (j < i)
+          if (max <  *(a+i*n+j))
+         max =  *(a+i*n+j);
+      }
+  }
+  printf("left down %d\n",max);
+  max = -10;
+  //right up
+  for (int i = 0; i < n ; i++){
+    for (int j = 0; j < b ; j++)
+      {
+          if (j > i)
+          if (max <  *(a+i*n+j))
+         max = *(a+i*n+j);
+      }
+  }
+  printf("right up %d\n",max);
+  max = -10;
+  //right down
+  for (int i = 0; i < n ; i++){
+    for (int j = 0; j < b ; j++)
+      {
+          if (j>=n-i)
+          if (max <  *(a+i*n+j))
+         max =  *(a+i*n+j);
+      }
+  }
+  printf("right down %d\n",max);
+  max = -10;
+  
+  printf("vvedi nomer stroki ");
+  int num;
+  scanf("%d",&num);
+  for (int i = n+1; i>=num;i-- ){
+      for (int j = n;j>=0;--j){
+      *(a+i*n+j+n) = *(a+i*(n)+j);
+      }
+  }
+  printf("vvedi dopolnitelnyi %d simvolov ",n);
+  for (int i=0;i<n;i++){
+      scanf("%d", (a+num*n+i));
+  }
+  for (int i = 0; i < n+1; i++){
+    for (int j = 0; j < n; j++)
+      printf("%d ", *(a+i*n+j));
+      printf("\n");
+  }
+  
+}

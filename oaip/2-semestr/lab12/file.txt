@@ -1,0 +1,5 @@
+       №                    name:                  author:               publisher:                    year:                   pages:                  made in             are in stock
+         4                      hjy                      dgr                        t                     1879                      256             Россия                        +
+         2                      fgt                      dvb                      djn                     1987                      256             Россия                        +
+         1                      qwe                      asd                      qaz                     2005                      300         Беларусь                        +
+         3                      dcv                     sdfg                     sffg                     2022                      157           Украина                        -
