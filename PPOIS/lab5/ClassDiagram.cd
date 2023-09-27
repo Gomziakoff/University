@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Shape">
-    <Position X="3" Y="0.5" Width="1.5" />
+  <Class Name="Device1">
+    <Position X="2.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAACAAAAAAAAAAAAABAAAAAACAAAAAgAAIAAE=</HashCode>
+      <HashCode>AgQAAAAAAAAAAAABACAAAAAAARAhAAAAAAAAAAAAAgA=</HashCode>
       <FileName>lab5.cpp</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Circle">
-    <Position X="5.25" Y="1.75" Width="1.5" />
+  <Class Name="Device2">
+    <Position X="5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAACCAAAAAAAAAAAAAAAAgAAAAACIAAAAAAAAE=</HashCode>
+      <HashCode>AgQAAAAAAAAAAIAAACAAAAAAARABAAAAAAAAAAAAQgA=</HashCode>
       <FileName>lab5.cpp</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Rectangle">
-    <Position X="0.75" Y="1.75" Width="1.5" />
+  <Class Name="Hub">
+    <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAQABAAAACAAAAAAwACAAAAAAAAgAAAAAAAAAAAACAE=</HashCode>
+      <HashCode>CAQAAAAAAAAAAAAAACAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>lab5.cpp</FileName>
     </TypeIdentifier>
   </Class>

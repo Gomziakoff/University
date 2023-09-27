@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <fstream>
 #include <string>
-
+#include <stdio.h>
 using namespace std;
 
 class InOutConsole {
@@ -11,13 +11,19 @@ public:
 	InOutConsole() { str = "Hello world!"; }
 	InOutConsole(string str) { this->str = str; }
 	InOutConsole(const InOutConsole& inp) { this->str = inp.str; }
-	~InOutConsole(){}
+	~InOutConsole() {}
 	void read() {
 		cout << "enter sstring:" << endl;
 		getline(cin, str);
 	}
 	void write() {
 		puts(str.c_str());
+	}
+	string get() {
+		return str;
+	}
+	void put(const string& newStr) {
+		str = newStr;
 	}
 };
 
@@ -40,6 +46,12 @@ public:
 		file << str;
 		file.close();
 	}
+	string get() {
+		return str;
+	}
+	void put(const string& newStr) {
+		str = newStr;
+	}
 };
 
 class InOutArrayFile {
@@ -51,7 +63,7 @@ public:
 		for (int i = 0; i < 3; i++)
 			this->str[i] = str[i];
 	}
-	InOutArrayFile(const InOutArrayFile& inp) { 
+	InOutArrayFile(const InOutArrayFile& inp) {
 		for (int i = 0; i < 3; i++)
 			this->str[i] = inp.str[i];
 	}
@@ -71,6 +83,19 @@ public:
 		}
 		file.close();
 	}
+	string get(int index) {
+		if (index >= 0 && index < 3) {
+			return str[index];
+		}
+		else {
+			return "";
+		}
+	}
+	void put(int index, const string& newStr) {
+		if (index >= 0 && index < 3) {
+			str[index] = newStr;
+		}
+	}
 };
 
 int main() {
@@ -84,4 +109,6 @@ int main() {
 	file.read();
 	arfile.write();
 	arfile.read();
+	file.put("bam bam bam");
+	cout << file.get();
 }

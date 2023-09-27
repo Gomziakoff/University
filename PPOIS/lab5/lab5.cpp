@@ -3,75 +3,79 @@
 
 using namespace std;
 
-class Shape {
-public:
-    Shape() {
-        color = "nothing";
-    }
-	Shape(const string& color) : color(color) {}
-    Shape(const Shape& shape) : color(shape.color) {}
-    ~Shape() {}
-
-    virtual double area() const = 0;
-    virtual double perimetr() const = 0;
-
-    string getColor() {
-        return color;
-    }
-    void setColor(string color) {
-        this->color = color;
-    }
+class Device1 {
 private:
-    string color;
+	int id;
+	int type;
+public:
+	Device1() { id = 0; type = 0; }
+	Device1(int id, int type) {
+		this->id = id;
+		this->type = type;
+	}
+	Device1(const Device1& dev) {
+		this->id = dev.id;
+		this->type = dev.type;
+	}
+	~Device1(){}
+	void setId(int id) { this->id = id; }
+	void setType(int type) { this->type = type; }
+	int getId(){ return id; }
+	int getType() { return type; }
+	void print(){ cout << " Device1 id:" << getId() << " Device1 type:" << getType() << endl; }
 };
 
-class Circle: public Shape{
-public:
-    Circle(const string& color, double radius) : Shape(color), radius(radius) {};
-
-    double area() const override {
-        return 3.14 * radius * radius;
-    }
-
-    double perimetr() const override {
-        return 2 * 3.14 * radius;
-    }
-
-    double getRadius() { return radius; }
-    void setRadius(double radius) { this->radius = radius; }
-    void print() {
-        cout << "circle:" << endl << " color: " << getColor() << "; radius: " << radius << endl << "area: " << area() << " perimetr: " << perimetr() << endl;
-    }
+class Device2 {
 private:
-    double radius;
+	int id;
+	int type;
+public:
+	Device2() { id = 0; type = 0; }
+	Device2(int id, int type) {
+		this->id = id;
+		this->type = type;
+	}
+	Device2(const Device2& dev) {
+		this->id = dev.id;
+		this->type = dev.type;
+	}
+	~Device2() {}
+	void setId(int id) { this->id = id; }
+	void setType(int type) { this->type = type; }
+	int getId() { return id; }
+	int getType() { return type; }
+	void print() { cout << " Device2 id:" << getId() << " Device2 type:" << getType() << endl; }
 };
 
-class Rectangle : public Shape {
+class Hub : public Device1,public Device2{
 public:
-    Rectangle(const string& color, double len, double width) : Shape(color), len(len), width(width) {};
-    
-    double area() const override {
-        return len * width;
-    }
-    double perimetr() const override {
-        return 2 * (len + width);
-    }
-    double getLen() { return len; }
-    double getWidth() { return width; }
-    void setLen(double len) { this->len = len; }
-    void setWidth(double width) { this->width = width; }
-    void print() { 
-        cout <<"rectangle" << endl << "color: " << getColor() << "; len: " << len << "; width: " << width << endl << "area: " << area() << " perimetr: " << perimetr() << endl;
-    }
-private:
-    double len;
-    double width;
+	Hub() {
+		Device1::setId(1234);
+		Device2::setId(1111);
+		Device1::setType(12);
+		Device2::setType(21);
+	}
+	Hub(int id, int type) : Device1(id,type),Device2(id,type){}
+	Hub(const Hub& hub) : Device1(hub), Device2(hub){}
+	void setId(int id) { 
+		Device1::setId(1234);
+		Device2::setId(1111);
+	}
+	void setType(int type) {
+		Device1::setType(12);
+		Device2::setType(21);
+	}
+	void print() {
+		cout << " Device1 id:" << Device1::getId() << " Device1 type:" << Device1::getType() << endl;
+		cout << " Device1 id:" << Device2::getId() << " Device1 type:" << Device2::getType() << endl;
+	}
 };
 
 int main() {
-    Rectangle greenrect("green", 10, 5);
-    Circle redcircle("red", 4);
-    greenrect.print();
-    redcircle.print();
-    return 0;
+	Device1 device1(1, 2);
+	Device2 device2(3, 4);
+	Hub hub(6, 7);
+	device1.print();
+	device2.print();
+	hub.print();
 }
