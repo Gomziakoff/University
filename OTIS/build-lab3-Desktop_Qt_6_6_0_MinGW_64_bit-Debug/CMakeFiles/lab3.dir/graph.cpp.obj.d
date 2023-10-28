@@ -379,6 +379,7 @@ CMakeFiles/lab3.dir/graph.cpp.obj: \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QMenuBar \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qmenubar.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qmenu.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QPushButton \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QStatusBar \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qstatusbar.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QWidget \

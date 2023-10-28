@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -22,6 +23,7 @@ class Ui_Graph
 {
 public:
     QWidget *centralwidget;
+    QPushButton *pushButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -32,6 +34,9 @@ public:
         Graph->resize(800, 600);
         centralwidget = new QWidget(Graph);
         centralwidget->setObjectName("centralwidget");
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(200, 90, 80, 24));
         Graph->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Graph);
         menubar->setObjectName("menubar");
@@ -49,6 +54,7 @@ public:
     void retranslateUi(QMainWindow *Graph)
     {
         Graph->setWindowTitle(QCoreApplication::translate("Graph", "Graph", nullptr));
+        pushButton->setText(QCoreApplication::translate("Graph", "PushButton", nullptr));
     } // retranslateUi
 
 };
