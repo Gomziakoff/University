@@ -1,0 +1,4 @@
+﻿  lab6.cpp
+D:\progr\github\University\MOIS\lab6\Graph.h(26,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\MOIS\lab6\Graph.h(42,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  lab6.vcxproj -> D:\progr\github\University\MOIS\lab6\x64\Debug\lab6.exe

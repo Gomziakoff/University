@@ -7,6 +7,9 @@ int main() {
     pid_t pid1, pid2, pid3, pid4, pid5, pid6, pid7;
     printf("Порождение процесса 1 PID=%d PPID=%d\n", getpid(), getppid());
 
+
+
+
     // Порождение процесса 2
     if ((pid1 = fork()) < 0) {
         printf("Ошибка при порождении процесса 2!\n");
