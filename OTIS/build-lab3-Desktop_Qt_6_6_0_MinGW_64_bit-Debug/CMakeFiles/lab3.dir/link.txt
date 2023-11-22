@@ -1,3 +1,0 @@
-D:\progr\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\lab3.dir/objects.a
-D:\progr\Qt\Tools\mingw1120_64\bin\ar.exe qc CMakeFiles\lab3.dir/objects.a @CMakeFiles\lab3.dir\objects1.rsp
-D:\progr\Qt\Tools\mingw1120_64\bin\g++.exe -DQT_QML_DEBUG -g -mwindows -Wl,--whole-archive CMakeFiles\lab3.dir/objects.a -Wl,--no-whole-archive -o lab3.exe -Wl,--out-implib,liblab3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\lab3.dir\linklibs.rsp
