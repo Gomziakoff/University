@@ -358,6 +358,23 @@ CMakeFiles/GraphEditor.dir/mainwindow.cpp.obj: \
  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qcursor.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qbitmap.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qtabwidget.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QGuiApplication \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreevent.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qeventloop.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qnativeinterface.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlocale.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QMimeData \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmimedata.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QClipboard \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qclipboard.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QIODevice \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiodevice.h \
  D:/progr/github/University/OTIS/lab3/build-GraphEditor-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/GraphEditor_autogen/include/ui_mainwindow.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QVariant \
  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qvariant.h \
@@ -365,15 +382,6 @@ CMakeFiles/GraphEditor.dir/mainwindow.cpp.obj: \
  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qaction.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QApplication \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreevent.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qeventloop.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qnativeinterface.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlocale.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QGridLayout \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qgridlayout.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qlayout.h \
@@ -395,21 +403,40 @@ CMakeFiles/GraphEditor.dir/mainwindow.cpp.obj: \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QWidget \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qwidget.h \
  D:\progr\github\University\OTIS\lab3\GraphEditor\graphwindow.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QWidget \
- D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QGraphicsScene \
- D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpen.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QGraphicsSceneMouseEvent \
- D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qgraphicssceneevent.h \
+ D:/progr/github/University/OTIS/lab3/build-GraphEditor-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/GraphEditor_autogen/include/ui_graphwindow.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QComboBox \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qcombobox.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qstyleoption.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qvalidator.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qregularexpression.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qslider.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qabstractslider.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qstyle.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qtabbar.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qrubberband.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qabstractitemmodel.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QGraphicsView \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qgraphicsview.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpainter.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qtextoption.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpen.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qscrollarea.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QPushButton \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qpushbutton.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QVBoxLayout \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qboxlayout.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QWidget \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QGraphicsScene \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qgraphicsscene.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QGraphicsSceneMouseEvent \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qgraphicssceneevent.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QGraphicsView \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QToolButton \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qtoolbutton.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qabstractbutton.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QPixmap \
  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpixmap.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QPainter \
@@ -430,5 +457,76 @@ CMakeFiles/GraphEditor.dir/mainwindow.cpp.obj: \
  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QList \
  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlist.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QGraphicsPathItem \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QJsonArray \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qjsonarray.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qjsonvalue.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcborvalue.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qdatetime.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcalendar.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcborcommon.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/quuid.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qendian.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QJsonObject \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qjsonobject.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QJsonDocument \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qjsondocument.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QKeyEvent \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qevent.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiodevice.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qpointer.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qeventpoint.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qvector2d.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qvectornd.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpointingdevice.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qinputdevice.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qscreen.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QList \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QObject \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qobject.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QRect \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qrect.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QSize \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qsize.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QSizeF \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QTransform \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qtransform.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QTableWidget \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qtablewidget.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qtableview.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qabstractitemview.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+ D:\progr\github\University\OTIS\lab3\GraphEditor\graph_LIB.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iostream \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ostream \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ios \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_ios.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_facets.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cwctype \
+ D:/progr/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_facets.tcc \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_ios.tcc \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream.tcc \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iomanip \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/locale \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_facets_nonio.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/codecvt.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_facets_nonio.tcc \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_conv.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/quoted_string.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/sstream \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/sstream.tcc \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/fstream \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fstream.tcc \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/set \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_set.h \
+ D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multiset.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QMdiSubWindow \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qmdisubwindow.h

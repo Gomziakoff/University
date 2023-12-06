@@ -24,6 +24,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         graphwindow.h graphwindow.cpp graphwindow.ui
+        graph_LIB.h
 
 
     )

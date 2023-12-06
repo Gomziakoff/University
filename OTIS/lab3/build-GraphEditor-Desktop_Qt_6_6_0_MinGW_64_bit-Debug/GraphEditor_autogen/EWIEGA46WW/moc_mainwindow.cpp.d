@@ -1,5 +1,7 @@
 D:/progr/github/University/OTIS/lab3/build-GraphEditor-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/GraphEditor_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/progr/github/University/OTIS/lab3/GraphEditor/mainwindow.h \
   D:/progr/github/University/OTIS/lab3/build-GraphEditor-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/GraphEditor_autogen/moc_predefs.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QIODevice \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QMimeData \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/q20functional.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/q20memory.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/q20type_traits.h \
@@ -28,9 +30,13 @@ D:/progr/github/University/OTIS/lab3/build-GraphEditor-Desktop_Qt_6_6_0_MinGW_64
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcontainerinfo.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcontainertools_impl.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcontiguouscache.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreevent.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qdarwinhelpers.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qdatastream.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qdebug.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qeventloop.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qexceptionhandling.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qflags.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qfloat16.h \
@@ -42,12 +48,14 @@ D:/progr/github/University/OTIS/lab3/build-GraphEditor-Desktop_Qt_6_6_0_MinGW_64
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qglobalstatic.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qhash.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qhashfunctions.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiodevice.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiodevicebase.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiterable.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiterator.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlatin1stringview.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qline.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlist.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlocale.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlogging.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmalloc.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmap.h \
@@ -55,8 +63,10 @@ D:/progr/github/University/OTIS/lab3/build-GraphEditor-Desktop_Qt_6_6_0_MinGW_64
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmath.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmetacontainer.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmetatype.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmimedata.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qminmax.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qnamespace.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qnativeinterface.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qnumeric.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qobject.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qobject_impl.h \
@@ -113,16 +123,22 @@ D:/progr/github/University/OTIS/lab3/build-GraphEditor-Desktop_Qt_6_6_0_MinGW_64
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qvarlengtharray.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qversiontagging.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qxptype_traits.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QClipboard \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QGuiApplication \
   D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qaction.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qbitmap.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qbrush.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qclipboard.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qcolor.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qcursor.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qfont.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qfontinfo.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qfontmetrics.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qicon.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qimage.h \
+  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qkeysequence.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpaintdevice.h \
   D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpalette.h \

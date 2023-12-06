@@ -3,11 +3,21 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mmc:Q_OBJECT
  mdp:D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/github/University/OTIS/lab3/build-GraphEditor-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/GraphEditor_autogen/moc_predefs.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QIODevice
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QJsonArray
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QJsonDocument
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QJsonObject
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QList
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QMimeData
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QObject
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QRect
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QSize
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QSizeF
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/q20functional.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/q20memory.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/q20type_traits.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/q23utility.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qabstractitemmodel.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qalgorithms.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qanystringview.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qarraydata.h
@@ -22,6 +32,9 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qbytearrayalgorithms.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qbytearraylist.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qbytearrayview.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcalendar.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcborcommon.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcborvalue.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qchar.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcompare.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcompare_impl.h
@@ -32,10 +45,15 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcontainerinfo.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcontainertools_impl.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcontiguouscache.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreevent.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qdarwinhelpers.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qdatastream.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qdatetime.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qdebug.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qendian.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qeventloop.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qexceptionhandling.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qflags.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qfloat16.h
@@ -47,12 +65,19 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qglobalstatic.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qhash.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qhashfunctions.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiodevice.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiodevicebase.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qitemselectionmodel.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiterable.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiterator.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qjsonarray.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qjsondocument.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qjsonobject.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qjsonvalue.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlatin1stringview.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qline.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlist.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlocale.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlogging.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmalloc.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmap.h
@@ -60,8 +85,10 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmath.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmetacontainer.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmetatype.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmimedata.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qminmax.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qnamespace.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qnativeinterface.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qnumeric.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qobject.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qobject_impl.h
@@ -70,9 +97,11 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qoverload.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qpair.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qpoint.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qpointer.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qprocessordetection.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qrect.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qrefcount.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qregularexpression.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qscopedpointer.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qscopeguard.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qset.h
@@ -115,22 +144,34 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qtypes.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qurl.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qutf8stringview.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/quuid.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qvariant.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qvarlengtharray.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qversiontagging.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qxptype_traits.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QClipboard
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QGuiApplication
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QKeyEvent
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QPainter
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QPixmap
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QTransform
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qaction.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qbitmap.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qbrush.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qclipboard.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qcolor.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qcursor.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qevent.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qeventpoint.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qfont.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qfontinfo.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qfontmetrics.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qicon.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qimage.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qinputdevice.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qinputmethod.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qkeysequence.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpaintdevice.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpainter.h
@@ -139,10 +180,12 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpen.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpixelformat.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpixmap.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpointingdevice.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpolygon.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qregion.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qrgb.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qrgba64.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qscreen.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qtextcursor.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qtextdocument.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qtextformat.h
@@ -151,6 +194,9 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qtguiexports.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qtguiglobal.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qtransform.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qvalidator.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qvector2d.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qvectornd.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qwindowdefs.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qwindowdefs_win.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QGraphicsEllipseItem
@@ -160,10 +206,15 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QGraphicsView
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QInputDialog
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QMessageBox
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QTableWidget
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QToolButton
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QWidget
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qabstractbutton.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qabstractitemview.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qabstractscrollarea.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qabstractslider.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qabstractspinbox.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qdialog.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qframe.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qgraphicsitem.h
@@ -173,8 +224,16 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qinputdialog.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qlineedit.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qmessagebox.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qrubberband.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qscrollarea.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qsizepolicy.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qslider.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qstyle.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qstyleoption.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qtabbar.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qtableview.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qtablewidget.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qtabwidget.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qtoolbutton.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qtwidgets-config.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qtwidgetsexports.h
@@ -195,10 +254,13 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocator.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/atomic_base.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/atomic_lockfree_defines.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_ios.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_ios.tcc
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_string.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_string.tcc
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/char_traits.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/charconv.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/codecvt.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/concept_check.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/cpp_type_traits.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/cxxabi_forced.h
@@ -208,6 +270,7 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception_defines.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception_ptr.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/fstream.tcc
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/functexcept.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/functional_hash.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hash_bytes.h
@@ -215,25 +278,34 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hashtable_policy.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/invoke.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ios_base.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/list.tcc
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_classes.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_classes.tcc
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_conv.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_facets.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_facets.tcc
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_facets_nonio.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/locale_facets_nonio.tcc
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/localefwd.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/memoryfwd.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/move.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/nested_exception.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/node_handle.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream.tcc
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream_insert.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/parse_numbers.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/postypes.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/predefined_ops.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ptr_traits.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/quoted_string.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/range_access.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/refwrap.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/shared_ptr.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/shared_ptr_atomic.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/shared_ptr_base.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/specfun.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/sstream.tcc
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_abs.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_function.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algo.h
@@ -248,10 +320,12 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_list.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_map.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multimap.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_multiset.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_numeric.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_pair.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_raw_storage_iter.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_relops.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_set.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tempbuf.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_tree.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_uninitialized.h
@@ -279,6 +353,7 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstring
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ctime
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cwchar
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cwctype
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/debug/assertions.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/debug/debug.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/exception
@@ -290,22 +365,31 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/numeric_traits.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/string_conversions.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/type_traits.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/fstream
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/functional
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/initializer_list
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iomanip
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ios
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iosfwd
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iostream
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iterator
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/locale
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/map
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/memory
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/new
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/numeric
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/optional
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ostream
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/execution_defs.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_algorithm_defs.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_memory_defs.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/pstl/glue_numeric_defs.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ratio
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/set
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/sstream
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/stdexcept
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/stdlib.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/streambuf
@@ -332,14 +416,20 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/variant
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++io.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/time_members.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdarg.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdbool.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stddef.h
@@ -379,10 +469,16 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/progr/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
+ mdp:D:/progr/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
+ mdp:D:/progr/github/University/OTIS/lab3/GraphEditor/graph_LIB.h
+ uic:ui_graphwindow.h
+D:/progr/github/University/OTIS/lab3/GraphEditor/graph_LIB.h
 D:/progr/github/University/OTIS/lab3/GraphEditor/mainwindow.h
  mmc:Q_OBJECT
  mdp:D:/progr/github/University/OTIS/lab3/GraphEditor/mainwindow.h
  mdp:D:/progr/github/University/OTIS/lab3/build-GraphEditor-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/GraphEditor_autogen/moc_predefs.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QIODevice
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QMimeData
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/q20functional.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/q20memory.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/q20type_traits.h
@@ -411,9 +507,13 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/mainwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcontainerinfo.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcontainertools_impl.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcontiguouscache.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreevent.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qdarwinhelpers.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qdatastream.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qdebug.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qeventloop.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qexceptionhandling.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qflags.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qfloat16.h
@@ -425,12 +525,14 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/mainwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qglobalstatic.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qhash.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qhashfunctions.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiodevice.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiodevicebase.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiterable.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiterator.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlatin1stringview.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qline.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlist.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlocale.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlogging.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmalloc.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmap.h
@@ -438,8 +540,10 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/mainwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmath.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmetacontainer.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmetatype.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmimedata.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qminmax.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qnamespace.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qnativeinterface.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qnumeric.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qobject.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qobject_impl.h
@@ -496,16 +600,22 @@ D:/progr/github/University/OTIS/lab3/GraphEditor/mainwindow.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qvarlengtharray.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qversiontagging.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qxptype_traits.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QClipboard
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QGuiApplication
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qaction.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qbitmap.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qbrush.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qclipboard.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qcolor.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qcursor.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qfont.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qfontinfo.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qfontmetrics.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qicon.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qimage.h
+ mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qinputmethod.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qkeysequence.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpaintdevice.h
  mdp:D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qpalette.h

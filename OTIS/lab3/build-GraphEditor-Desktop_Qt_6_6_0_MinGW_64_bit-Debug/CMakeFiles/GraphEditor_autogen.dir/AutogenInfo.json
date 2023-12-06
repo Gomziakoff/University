@@ -256,6 +256,12 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/progr/github/University/OTIS/lab3/GraphEditor/graph_LIB.h",
+			"MU",
+			"EWIEGA46WW/moc_graph_LIB.cpp",
+			null
+		],
+		[
 			"D:/progr/github/University/OTIS/lab3/GraphEditor/graphwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_graphwindow.cpp",

@@ -358,14 +358,22 @@ CMakeFiles/GraphEditor.dir/main.cpp.obj: \
  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qcursor.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qbitmap.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qtabwidget.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QApplication \
- D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QGuiApplication \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreevent.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qeventloop.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qnativeinterface.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
  D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qlocale.h \
- D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QMimeData \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qmimedata.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/QClipboard \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtGui/qclipboard.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/QIODevice \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtCore/qiodevice.h \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/QApplication \
+ D:/progr/Qt/6.6.0/mingw_64/include/QtWidgets/qapplication.h
