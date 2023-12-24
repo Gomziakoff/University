@@ -4,8 +4,6 @@
 #include <list>
 #include <fstream>
 #include <vector>
-#include <stack>
-#include <unordered_map>
 
 using namespace std;
 
@@ -13,18 +11,15 @@ class Graph {
 	int numvert;
 	list<int>* adjLists;
 	bool* visited;
-	vector<int> hash;
-	unordered_map<int, int> nodeMap;
 public:
 	Graph(int V);
 	void addEdge(int src, int dest);
-	void DFS(int startVertex);
+	void DFS(int vertex, bool visited[]);
+	void BFS(int vertex, bool visited[]);
+	int num_comp_DFS();
+	int num_comp_BFS();
 	void ShowAdjMatrix();
 	void ShowIntendenceMatrix();
-	vector<int> getHash();
-	void ShowTree();
-private:
-	void printTreeRecursive(int vertex, int level, std::unordered_map<int, int>& nodeMap, bool isLastChild);
 };
 
 Graph::Graph(int V)
@@ -37,28 +32,68 @@ Graph::Graph(int V)
 void Graph::addEdge(int src, int dest)
 {
 	adjLists[src].push_front(dest);
+	adjLists[dest].push_back(src);
 }
 
-void Graph::DFS(int startVertex) //deep search
+void Graph::DFS(int vertex, bool visited[]) //deep search
 {
-	stack<int> stack;
-	stack.push(startVertex);
-	visited[startVertex] = true;
+	visited[vertex] = true;
+	list<int>::iterator i;
+	for (i = adjLists[vertex].begin(); i != adjLists[vertex].end(); ++i)
+		if (!visited[*i])
+			DFS(*i, visited);
+}
 
-	while (!stack.empty()) {
-		int currentVertex = stack.top();
-stack.pop();
-		hash.push_back(currentVertex);
-
-		for (int neighbor : adjLists[currentVertex]) {
-				stack.push(neighbor);
-				visited[neighbor] = true;
+void Graph::BFS(int vertex, bool visited[])
+{
+	list<int> queue;
+	visited[vertex] = true;
+	queue.push_back(vertex);
+	list<int>::iterator i;
+	while (!queue.empty()) {
+		int currVertex = queue.front();
+		queue.pop_front();
+		for (i = adjLists[currVertex].begin(); i != adjLists[currVertex].end(); ++i)
+		{
+			if (!visited[*i])
+			{
+				visited[*i] = true;
+				queue.push_back(*i);
+			}
 		}
 	}
 }
 
-vector<int> Graph::getHash() {
-	return hash;
+int Graph::num_comp_DFS() {
+	int count = 0;
+	bool* visited = new bool[numvert];
+	for (int i = 0; i < numvert; ++i) {
+		visited[i] = false;
+	}
+	for (int i = 0; i < numvert; ++i) {
+		if (!visited[i]) {
+			DFS(i, visited);
+			count++;
+		}
+	}
+	delete[] visited;
+	return count;
+}
+
+int Graph::num_comp_BFS() {
+	int count = 0;
+	bool* visited = new bool[numvert];
+	for (int i = 0; i < numvert; ++i) {
+		visited[i] = false;
+	}
+	for (int i = 0; i < numvert; ++i) {
+		if (!visited[i]) {
+			BFS(i, visited);
+			count++;
+		}
+	}
+	delete[] visited;
+	return count;
 }
 
 void Graph::ShowAdjMatrix() {
@@ -102,32 +137,3 @@ void Graph::ShowIntendenceMatrix() {
 		cout << endl;
 	}
 }
-
-void Graph::ShowTree() {
-	std::cout << "Tree Structure:" << std::endl;
-	printTreeRecursive(0, 0, nodeMap, true);
-}
-
-void Graph::printTreeRecursive(int vertex, int level, std::unordered_map<int, int>& nodeMap, bool isLastChild) {
-	for (int i = 0; i < level; ++i) {
-		if (i == level - 1 && !isLastChild) {
-			std::cout << "├─";  // Ветка
-		}
-		else if (i == level - 1 && isLastChild) {
-			std::cout << "└─";  // Последняя ветка
-		}
-		else {
-			std::cout << "   ";  // Промежуток до следующей вершины
-		}
-	}
-	std::cout << "Vertex " << vertex << std::endl;
-
-	int numChildren = adjLists[vertex].size();
-	int currentChild = 0;
-
-	for (int neighbor : adjLists[vertex]) {
-		
-		printTreeRecursive(neighbor, level + 1, nodeMap, ++currentChild == numChildren);
-	}
-}
-
