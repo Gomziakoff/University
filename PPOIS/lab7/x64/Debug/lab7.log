@@ -1,0 +1,6 @@
+﻿  lab7.cpp
+D:\progr\github\University\PPOIS\lab7\lab7.cpp(167,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\PPOIS\lab7\lab7.cpp(166,1): message : во время компиляции функции-члена класс шаблон "void stack<int>::print(void)"
+D:\progr\github\University\PPOIS\lab7\lab7.cpp(202,12): message : выполняется компиляция ссылки на экземпляр шаблон функции "void stack<int>::print(void)"
+D:\progr\github\University\PPOIS\lab7\lab7.cpp(198,17): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "stack<int>"
+  lab7.vcxproj -> D:\progr\github\University\PPOIS\lab7\x64\Debug\lab7.exe

@@ -1,0 +1,6 @@
+cucle 1:(1426)
+cucle 2:(3)
+cucle 3:(5)
+degree of substitution:6
+parity of substitution by inversions: false
+parity of substitution by transpositions: false

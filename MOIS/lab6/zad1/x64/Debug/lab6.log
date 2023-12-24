@@ -1,0 +1,9 @@
+﻿  lab6.cpp
+D:\progr\github\University\MOIS\lab6\zad1\Graph.h(47,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\MOIS\lab6\zad1\Graph.h(77,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\MOIS\lab6\zad1\Graph.h(93,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\MOIS\lab6\zad1\Graph.h(113,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\MOIS\lab6\zad1\Graph.h(141,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\MOIS\lab6\zad1\Graph.h(208,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\MOIS\lab6\zad1\lab6.cpp(20,13): warning C4244: инициализация: преобразование "__int64" в "int", возможна потеря данных
+  lab6.vcxproj -> D:\progr\github\University\MOIS\lab6\zad1\x64\Debug\lab6.exe
