@@ -1,0 +1,35 @@
+﻿  lab1.cpp
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(1): warning C4627: #include <windows.h>: пропущен при поиске использования предкомпилированного заголовка
+          Добавление директивы в "StdAfx.h" или перестройка предкомпилированного заголовка
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(5): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "g_hWnd"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(5): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(5): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "CALLBACK"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(9): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(9): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "WndProc"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(9): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(9): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "hWnd"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(9): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(9): error C2059: синтаксическая ошибка: )
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(12): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "WinMain"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(12): error C2065: HINSTANCE: необъявленный идентификатор
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(12): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "hInstance"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(12): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(12): error C2059: синтаксическая ошибка: )
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(13): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(13): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(52): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "CALLBACK"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(52): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(52): error C2086: int LRESULT: переопределение
+          d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(9): см. объявление "LRESULT"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(52): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "WndProc"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(52): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(52): error C2086: int CALLBACK: переопределение
+          d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(9): см. объявление "CALLBACK"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(52): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "hWnd"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(52): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(52): error C2374: WndProc: переопределение; множественная инициализация
+          d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(9): см. объявление "WndProc"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(52): error C2059: синтаксическая ошибка: )
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(53): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+d:\progr\github\university\ppois\4sem\lab1\lab1\lab1.cpp(53): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
