@@ -1,5 +1,9 @@
 ﻿  lab7.cpp
-D:\progr\github\University\MOIS\lab7\Graph.h(86,31): warning C4267: +=: преобразование из "size_t" в "int"; возможна потеря данных
-D:\progr\github\University\MOIS\lab7\Graph.h(125,43): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-D:\progr\github\University\MOIS\lab7\lab7.cpp(19,45): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-  lab7.vcxproj -> D:\progr\github\University\MOIS\lab7\x64\Debug\lab7.exe
+D:\Progr\GitHub\University\MOIS\lab7\Graph.h(86,31): warning C4267: +=: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "lab7.cpp")
+  
+D:\Progr\GitHub\University\MOIS\lab7\Graph.h(125,18): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "lab7.cpp")
+  
+D:\Progr\GitHub\University\MOIS\lab7\lab7.cpp(19,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  lab7.vcxproj -> D:\Progr\GitHub\University\MOIS\lab7\x64\Debug\lab7.exe

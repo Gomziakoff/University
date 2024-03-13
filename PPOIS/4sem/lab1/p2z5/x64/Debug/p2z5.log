@@ -1,0 +1,4 @@
+﻿D:\Progr\VisualStudio\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (p2z5.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  p2z5.cpp
+D:\Progr\GitHub\University\PPOIS\4sem\p2z5\p2z5.cpp(219,39): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  p2z5.vcxproj -> D:\Progr\GitHub\University\PPOIS\4sem\p2z5\x64\Debug\p2z5,6,7,8.exe
