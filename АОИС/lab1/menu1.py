@@ -11,6 +11,7 @@ def menu():
                 try:
                     table = Table('','')
                     table.read_csv(filename)
+                    key_field, fields = table.get_fields()
                     break
                 except:
                     print("File not found")
@@ -74,7 +75,8 @@ def menu():
                         print(f"{key_field}: {record[0]}")
                         for i, field in enumerate(fields):
                             print(f"{field}: {record[i + 1]}")
-                        new_values = [key_value]
+                        new_key_value = input(f"Enter new value for key_value: \n")
+                        new_values = [new_key_value]
                         for field in fields:
                             new_values.append(input(f"Enter new value for {field}: \n"))
                         table.change_record(key_value, new_values)

@@ -23,8 +23,8 @@ def menu():
         elif choice == 'n':
             size = input("Enter the size of hash table")
             key_field = input("Enter the name of key field\n")
-            fields = input('Enter the names of the other fields (comma-separated): \n').split(',')
-            table = HashTable(size, key_field, fields)
+            fields = input('Enter the names of the other fields y(comma-separated): \n').split(',')
+            table = HashTable(int(size), key_field, fields)
             os.system('cls')
             break
         os.system('cls')
@@ -77,7 +77,8 @@ def menu():
                         print(f"{key_field}: {record[0]}")
                         for i, field in enumerate(fields):
                             print(f"{field}: {record[i + 1]}")
-                        new_values = [key_value]
+                        new_key_value = input(f"Enter new value for key_value: \n")
+                        new_values = [new_key_value]
                         for field in fields:
                             new_values.append(input(f"Enter new value for {field}: \n"))
                         table.change_record(key_value, new_values)

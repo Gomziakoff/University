@@ -1,0 +1,58 @@
+﻿  shifr.cpp
+D:\Progr\GitHub\University\KMZI\lab2\shifr\matrix.h(48,70): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\matrix.h(63,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(30,59): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(30,34): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(31,58): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(31,32): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(41,61): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(41,35): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(66,66): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(66,40): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(67,64): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(67,35): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(79,61): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(79,35): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(83,35): warning C4244: +=: преобразование "_Ty" в "_Ty", возможна потеря данных
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(83,35): warning C4244:         with
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(83,35): warning C4244:         [
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(83,35): warning C4244:             _Ty=double
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(83,35): warning C4244:         ]
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(83,35): warning C4244:         and
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(83,35): warning C4244:         [
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(83,35): warning C4244:             _Ty=int
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(83,35): warning C4244:         ]
+  (компиляция исходного файла "shifr.cpp")
+  
+D:\Progr\GitHub\University\KMZI\lab2\shifr\lib.h(134,16): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "shifr.cpp")
+  
+  shifr.vcxproj -> D:\Progr\GitHub\University\KMZI\lab2\shifr\x64\Debug\shifr.exe

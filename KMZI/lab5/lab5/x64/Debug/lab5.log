@@ -1,0 +1,3 @@
+﻿  lab5.cpp
+D:\Progr\GitHub\University\KMZI\lab5\lab5.cpp(136,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  lab5.vcxproj -> D:\Progr\GitHub\University\KMZI\lab5\x64\Debug\lab5.exe

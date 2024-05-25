@@ -1,0 +1,4 @@
+﻿  compress.cpp
+D:\Progr\GitHub\University\KMZI\lab1\compress\compress.cpp(23,51): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+D:\Progr\GitHub\University\KMZI\lab1\compress\compress.cpp(58,35): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  compress.vcxproj -> D:\Progr\GitHub\University\KMZI\lab1\compress\x64\Debug\compress.exe

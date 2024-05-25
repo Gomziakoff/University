@@ -1,10 +1,6 @@
- 9
+6
  a b 
- a c 
- b d 
- c f  
- c g 
- d h 
- f k 
- g l 
-
+ a e 
+ b c 
+ b d  
+ e f 

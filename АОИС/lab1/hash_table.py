@@ -18,8 +18,8 @@ class HashTable:
         for char in key:
             hash_code = (hash_code << 1) ^ ord(char)
         hash_code %= div
-        i = 0
-        #self.collisions_count = 0
+        i = hash_code
+        self.collisions_count = 0
         while i < self.size:
             if self.table[hash_code] is None or self.table[hash_code][0] == key:
                 self.search_count+=1
@@ -29,7 +29,6 @@ class HashTable:
                 self.collisions_count += 1
                 i += 1
                 hash_code = (hash_code + i**2) % self.size
-
         return hash_code
 
     def add_record(self, values):
@@ -39,17 +38,20 @@ class HashTable:
         self.n_records += 1
         h = self.hash_func(values[0])
         self.table[h] = values
-
         self.table[h].append([self.n_records, self.collisions_count])
+        print("record created")
 
     def remove_record(self, key_value):
         h = self.hash_func(key_value)
         self.table[h] = None
         self.n_records -= 1
+        print("record removed")
 
     def change_record(self, key_value, new_values):
         h = self.hash_func(key_value)
-        self.table[h] = new_values
+        self.table[h] = None
+        self.add_record(new_values)
+        print("record changed")
 
     def search_record(self, key_value):
         h = self.hash_func(key_value)

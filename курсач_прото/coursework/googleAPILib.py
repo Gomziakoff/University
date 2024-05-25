@@ -5,13 +5,14 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 import io
 import os
+from typing import List
 
 SCOPES = ['https://www.googleapis.com/auth/drive']
 SERVICE_ACCOUNT_FILE = 'key.json'
 credentials = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
 
-def upload_file(folder_id,name,file_path):
+def upload_file(folder_id:str,name:str,file_path:str) -> None:
     service = build('drive', 'v3', credentials=credentials)
 
     file_metadata = {
@@ -38,7 +39,7 @@ def upload_file(folder_id,name,file_path):
         return
 
 
-def get_folder_name(folder_id):
+def get_folder_name(folder_id:str) -> str or None:
     # ------------- Build Service -------------
     service = build('drive', 'v3', credentials=credentials)
     try:
@@ -56,7 +57,7 @@ def get_folder_name(folder_id):
         return
 
 
-def get_files_from_google_folder(folder_id):
+def get_files_from_google_folder(folder_id:str) -> List[dict] or None:
     service = build('drive', 'v3', credentials=credentials)
     if folder_id:
         query = f"'{folder_id}' in parents"
@@ -86,7 +87,7 @@ def get_files_from_google_folder(folder_id):
         return
 
 
-def get_files_from_google_folders():
+def get_files_from_google_folders() -> List[dict] or None:
     service = build('drive', 'v3', credentials=credentials)
     try:
         results = service.files().list(
@@ -113,7 +114,7 @@ def get_files_from_google_folders():
 
 
 
-def get_files_by_mimetype_google_folder(mimeType,folder_id):
+def get_files_by_mimetype_google_folder(mimeType:str,folder_id:str) -> None:
     service = build('drive', 'v3', credentials=credentials)
     try:
         results = service.files().list(
@@ -144,9 +145,9 @@ def get_files_by_mimetype_google_folder(mimeType,folder_id):
     return items
 
 
-def download_file(file_id):
+def download_file(file_id:str, fold_name):
     service = build('drive', 'v3', credentials=credentials)
-    filename = 'download/'
+    filename = 'download/'+fold_name
     if not os.path.exists(filename):
         os.makedirs(filename)
     else:
@@ -173,3 +174,4 @@ def download_file(file_id):
 
 if __name__ == '__main__':
     download_file('1pApyURHRazNUeJRKdc')
+    print(get_files_from_google_folder("1q9tAPkIM7NlLMiZhhYGafFdlMwsG7DWL"))
