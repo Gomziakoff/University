@@ -1,0 +1,7 @@
+﻿  lehlab10.3.cpp
+D:\Progr\GitHub\University\MOIS\lab10\lehlab10.3\lehlab10.3.cpp(8,17): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+D:\Progr\GitHub\University\MOIS\lab10\lehlab10.3\lehlab10.3.cpp(41,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\Progr\GitHub\University\MOIS\lab10\lehlab10.3\lehlab10.3.cpp(135,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\Progr\GitHub\University\MOIS\lab10\lehlab10.3\lehlab10.3.cpp(152,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\Progr\GitHub\University\MOIS\lab10\lehlab10.3\lehlab10.3.cpp(200,11): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  lehlab10.3.vcxproj -> D:\Progr\GitHub\University\MOIS\lab10\lehlab10.3\x64\Debug\lehlab10.3.exe

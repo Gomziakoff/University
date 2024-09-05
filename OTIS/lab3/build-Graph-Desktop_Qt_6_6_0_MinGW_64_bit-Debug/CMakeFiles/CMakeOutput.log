@@ -1,0 +1,104 @@
+The system is: Windows - 10.0.22621 - AMD64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: D:/progr/Qt/Tools/mingw1120_64/bin/g++.exe 
+Build flags: -DQT_QML_DEBUG
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+
+The CXX compiler identification is GNU, found in "D:/progr/github/University/OTIS/lab3/build-Graph-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/CMakeFiles/3.24.2/CompilerIdCXX/a.exe"
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: D:/progr/github/University/OTIS/lab3/build-Graph-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/progr/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_59af3/fast && D:/progr/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_59af3.dir\build.make CMakeFiles/cmTC_59af3.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/progr/github/University/OTIS/lab3/build-Graph-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_59af3.dir/testCXXCompiler.cxx.obj
+D:\progr\Qt\Tools\mingw1120_64\bin\g++.exe   -DQT_QML_DEBUG  -o CMakeFiles\cmTC_59af3.dir\testCXXCompiler.cxx.obj -c D:\progr\github\University\OTIS\lab3\build-Graph-Desktop_Qt_6_6_0_MinGW_64_bit-Debug\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+Linking CXX executable cmTC_59af3.exe
+D:\progr\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_59af3.dir\link.txt --verbose=1
+D:\progr\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\cmTC_59af3.dir/objects.a
+D:\progr\Qt\Tools\mingw1120_64\bin\ar.exe qc CMakeFiles\cmTC_59af3.dir/objects.a @CMakeFiles\cmTC_59af3.dir\objects1.rsp
+D:\progr\Qt\Tools\mingw1120_64\bin\g++.exe -DQT_QML_DEBUG  -Wl,--whole-archive CMakeFiles\cmTC_59af3.dir/objects.a -Wl,--no-whole-archive -o cmTC_59af3.exe -Wl,--out-implib,libcmTC_59af3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_59af3.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'D:/progr/github/University/OTIS/lab3/build-Graph-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp'
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: D:/progr/github/University/OTIS/lab3/build-Graph-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/progr/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_27ac6/fast && D:/progr/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_27ac6.dir\build.make CMakeFiles/cmTC_27ac6.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/progr/github/University/OTIS/lab3/build-Graph-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_27ac6.dir/src.cxx.obj
+D:\progr\Qt\Tools\mingw1120_64\bin\g++.exe -DCMAKE_HAVE_LIBC_PTHREAD  -DQT_QML_DEBUG  -std=gnu++17 -o CMakeFiles\cmTC_27ac6.dir\src.cxx.obj -c D:\progr\github\University\OTIS\lab3\build-Graph-Desktop_Qt_6_6_0_MinGW_64_bit-Debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_27ac6.exe
+D:\progr\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_27ac6.dir\link.txt --verbose=1
+D:\progr\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\cmTC_27ac6.dir/objects.a
+D:\progr\Qt\Tools\mingw1120_64\bin\ar.exe qc CMakeFiles\cmTC_27ac6.dir/objects.a @CMakeFiles\cmTC_27ac6.dir\objects1.rsp
+D:\progr\Qt\Tools\mingw1120_64\bin\g++.exe -DQT_QML_DEBUG  -Wl,--whole-archive CMakeFiles\cmTC_27ac6.dir/objects.a -Wl,--no-whole-archive -o cmTC_27ac6.exe -Wl,--out-implib,libcmTC_27ac6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_27ac6.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'D:/progr/github/University/OTIS/lab3/build-Graph-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test HAVE_STDATOMIC succeeded with the following output:
+Change Dir: D:/progr/github/University/OTIS/lab3/build-Graph-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/progr/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_2e575/fast && D:/progr/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_2e575.dir\build.make CMakeFiles/cmTC_2e575.dir/build
+mingw32-make.exe[1]: Entering directory 'D:/progr/github/University/OTIS/lab3/build-Graph-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2e575.dir/src.cxx.obj
+D:\progr\Qt\Tools\mingw1120_64\bin\g++.exe -DHAVE_STDATOMIC  -DQT_QML_DEBUG  -std=gnu++17 -o CMakeFiles\cmTC_2e575.dir\src.cxx.obj -c D:\progr\github\University\OTIS\lab3\build-Graph-Desktop_Qt_6_6_0_MinGW_64_bit-Debug\CMakeFiles\CMakeTmp\src.cxx
+Linking CXX executable cmTC_2e575.exe
+D:\progr\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_link_script CMakeFiles\cmTC_2e575.dir\link.txt --verbose=1
+D:\progr\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\cmTC_2e575.dir/objects.a
+D:\progr\Qt\Tools\mingw1120_64\bin\ar.exe qc CMakeFiles\cmTC_2e575.dir/objects.a @CMakeFiles\cmTC_2e575.dir\objects1.rsp
+D:\progr\Qt\Tools\mingw1120_64\bin\g++.exe -DQT_QML_DEBUG  -Wl,--whole-archive CMakeFiles\cmTC_2e575.dir/objects.a -Wl,--no-whole-archive -o cmTC_2e575.exe -Wl,--out-implib,libcmTC_2e575.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_2e575.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'D:/progr/github/University/OTIS/lab3/build-Graph-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <atomic>
+#include <cstdint>
+
+int main(int, char **)
+{
+    volatile std::atomic<char>    size_1;
+    volatile std::atomic<short>   size_2;
+    volatile std::atomic<int>     size_4;
+    volatile std::atomic<int64_t> size_8;
+
+    ++size_1;
+    ++size_2;
+    ++size_4;
+    ++size_8;
+
+    (void)size_1.load(std::memory_order_relaxed);
+    (void)size_2.load(std::memory_order_relaxed);
+    (void)size_4.load(std::memory_order_relaxed);
+    (void)size_8.load(std::memory_order_relaxed);
+
+    return 0;
+}

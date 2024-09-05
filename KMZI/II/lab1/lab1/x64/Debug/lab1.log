@@ -1,0 +1,5 @@
+﻿  lab1.cpp
+D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(99,51): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  lab1.vcxproj -> D:\progr\github\University\KMZI\II\lab1\x64\Debug\lab1.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
