@@ -1,39 +1,9 @@
 ﻿  lab1.cpp
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(14,10): error C2039: "vector": не является членом "std".
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iostream(18,1):
-       см. объявление "std"
-  
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(14,10): error C2065: vector: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(14,17): error C2062: тип "unsigned char" не требуется
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(29,5): error C2065: ctext: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(30,5): error C2065: ptext: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(35,45): error C2065: ptext: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(37,35): error C2065: ctext: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(37,58): error C2065: ptext: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(37,13): error C2660: EVP_PKEY_encrypt: функция не принимает 3 аргументов
-      D:\progr\vcpkg\installed\x64-windows\include\openssl\evp.h(1918,5):
-       см. объявление "EVP_PKEY_encrypt"
-      D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(37,13):
-      при попытке сопоставить список аргументов "(EVP_PKEY_CTX *, size_t *, size_t)"
-  
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(41,44): error C2065: ctext: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(18,19): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(54,10): error C2039: "vector": не является членом "std".
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.41.34120\include\iostream(18,1):
-       см. объявление "std"
-  
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(54,10): error C2065: vector: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(54,17): error C2062: тип "unsigned char" не требуется
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(68,5): error C2065: ptext: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(69,5): error C2065: ctext: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(74,45): error C2065: ctext: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(76,35): error C2065: ptext: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(76,58): error C2065: ctext: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(76,13): error C2660: EVP_PKEY_decrypt: функция не принимает 3 аргументов
-      D:\progr\vcpkg\installed\x64-windows\include\openssl\evp.h(1923,5):
-       см. объявление "EVP_PKEY_decrypt"
-      D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(76,13):
-      при попытке сопоставить список аргументов "(EVP_PKEY_CTX *, size_t *, size_t)"
-  
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(80,44): error C2065: ptext: необъявленный идентификатор
-D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(57,20): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(61,32): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(83,90): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(113,94): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(241,94): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\KMZI\II\lab1\lab1\lab1.cpp(270,95): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  lab1.vcxproj -> D:\progr\github\University\KMZI\II\lab1\x64\Debug\lab1.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
