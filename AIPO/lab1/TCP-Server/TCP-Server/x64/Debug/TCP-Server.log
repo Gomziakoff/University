@@ -1,0 +1,7 @@
+﻿  TCP-Server.cpp
+D:\progr\github\University\AIPO\lab1\TCP-Server\TCP-Server.cpp(53,60): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\AIPO\lab1\TCP-Server\TCP-Server.cpp(59,74): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\progr\github\University\AIPO\lab1\TCP-Server\TCP-Server.cpp(65,70): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  TCP-Server.vcxproj -> D:\progr\github\University\AIPO\lab1\TCP-Server\x64\Debug\TCP-Server.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
     perceptron = Perceptron(input_size=2)
 
-    learning_rate = 0.003
+    learning_rate = 0.007
     epochs = 10
     perceptron.train(training_inputs, labels, learning_rate, epochs)
     perceptron.plot_decision_boundary(training_inputs, labels)

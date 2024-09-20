@@ -1,0 +1,246 @@
+Wed Sep 18 20:40:22 2024
+Connection start
+Wed Sep 18 20:40:22 2024
+Sending command: ji;l at Wed Sep 18 20:40:22 2024
+
+Wed Sep 18 20:40:22 2024
+Received from server: Неверный формат запроса
+ at Wed Sep 18 20:40:22 2024
+
+Wed Sep 18 20:40:22 2024
+Connection end
+Wed Sep 18 20:47:09 2024
+Connection start
+Wed Sep 18 20:47:09 2024
+Sending command: vtelaoad text.txt at Wed Sep 18 20:47:09 2024
+
+Wed Sep 18 20:47:09 2024
+Received from server: Неверный формат запроса
+ at Wed Sep 18 20:47:09 2024
+
+Wed Sep 18 20:47:09 2024
+Connection end
+Wed Sep 18 20:47:37 2024
+Connection start
+Wed Sep 18 20:47:38 2024
+Sending command: load text.txt at Wed Sep 18 20:47:38 2024
+
+Wed Sep 18 20:47:38 2024
+Received from server: Hello world!
+ at Wed Sep 18 20:47:38 2024
+
+Wed Sep 18 20:47:38 2024
+Connection end
+Wed Sep 18 20:47:55 2024
+Connection start
+Wed Sep 18 20:47:55 2024
+Sending command: load teddxt.txt at Wed Sep 18 20:47:55 2024
+
+Wed Sep 18 20:47:55 2024
+Received from server: Файл не найден
+ at Wed Sep 18 20:47:55 2024
+
+Wed Sep 18 20:47:55 2024
+Connection end
+Wed Sep 18 20:53:35 2024
+Connection start
+Wed Sep 18 20:53:36 2024
+Sending command: сдщфload text.txt at Wed Sep 18 20:53:36 2024
+
+Wed Sep 18 20:53:36 2024
+Received from server: Неверный формат запроса
+ at Wed Sep 18 20:53:36 2024
+
+Wed Sep 18 20:53:36 2024
+Connection end
+Wed Sep 18 20:54:26 2024
+Connection start
+Wed Sep 18 20:54:26 2024
+Sending command: load textext.txt at Wed Sep 18 20:54:26 2024
+
+Wed Sep 18 20:54:34 2024
+Connection end
+Wed Sep 18 20:55:05 2024
+Connection start
+Wed Sep 18 20:55:05 2024
+Sending command: load jifjvierjtext.txt at Wed Sep 18 20:55:05 2024
+
+Wed Sep 18 20:55:05 2024
+Received from server: Файл не найден
+ at Wed Sep 18 20:55:05 2024
+
+Wed Sep 18 20:55:05 2024
+Connection end
+Wed Sep 18 20:55:54 2024
+Connection start
+Wed Sep 18 20:55:54 2024
+Sending command: kckiload texztt.txt at Wed Sep 18 20:55:54 2024
+
+Wed Sep 18 20:55:54 2024
+Received from server: Неверный формат запроса
+ at Wed Sep 18 20:55:54 2024
+
+Wed Sep 18 20:55:54 2024
+Connection end
+Wed Sep 18 20:56:31 2024
+Connection start
+Wed Sep 18 20:56:31 2024
+Sending command: ;lload ntext.txt at Wed Sep 18 20:56:31 2024
+
+Wed Sep 18 20:56:38 2024
+Connection end
+Wed Sep 18 20:58:28 2024
+Connection start
+Wed Sep 18 20:58:46 2024
+Connection start
+Wed Sep 18 20:58:46 2024
+Sending command: load text.txt at Wed Sep 18 20:58:46 2024
+
+Wed Sep 18 20:58:46 2024
+Received from server: Hello world!
+ at Wed Sep 18 20:58:46 2024
+
+Wed Sep 18 20:58:46 2024
+Connection end
+Wed Sep 18 20:59:43 2024
+Connection start
+Wed Sep 18 20:59:43 2024
+Sending command: load text.txt at Wed Sep 18 20:59:43 2024
+
+Wed Sep 18 20:59:43 2024
+Received from server: Hello world!
+ at Wed Sep 18 20:59:43 2024
+
+Wed Sep 18 20:59:43 2024
+Connection end
+Wed Sep 18 20:59:47 2024
+Connection start
+Wed Sep 18 20:59:47 2024
+Sending command: load hhh at Wed Sep 18 20:59:47 2024
+
+Wed Sep 18 20:59:47 2024
+Received from server: Файл не найден
+ at Wed Sep 18 20:59:47 2024
+
+Wed Sep 18 20:59:47 2024
+Connection end
+Wed Sep 18 20:59:52 2024
+Connection start
+Wed Sep 18 20:59:52 2024
+Sending command: load text.txt at Wed Sep 18 20:59:52 2024
+
+Wed Sep 18 20:59:52 2024
+Received from server: Hello world!
+ at Wed Sep 18 20:59:52 2024
+
+Wed Sep 18 20:59:52 2024
+Connection end
+Wed Sep 18 21:07:02 2024
+Connection start
+Wed Sep 18 21:07:02 2024
+Sending command: load ad text.txt at Wed Sep 18 21:07:02 2024
+
+Wed Sep 18 21:07:02 2024
+Received from server: Файл не найден
+ at Wed Sep 18 21:07:02 2024
+
+Wed Sep 18 21:07:02 2024
+Connection end
+Wed Sep 18 21:08:00 2024
+Connection start
+Wed Sep 18 21:08:00 2024
+Sending command: load text.txt at Wed Sep 18 21:08:00 2024
+
+Wed Sep 18 21:08:00 2024
+Received from server: Hello world!
+ at Wed Sep 18 21:08:00 2024
+
+Wed Sep 18 21:08:00 2024
+Connection end
+Wed Sep 18 21:10:13 2024
+Начало соединения
+Wed Sep 18 21:10:13 2024
+Отправка команды: д�load text.txt в Wed Sep 18 21:10:13 2024
+
+Wed Sep 18 21:10:13 2024
+Получено от сервера: Неверный формат запроса
+ в Wed Sep 18 21:10:13 2024
+
+Wed Sep 18 21:10:13 2024
+Окончание соединения
+Wed Sep 18 21:10:27 2024
+Начало соединения
+Wed Sep 18 21:10:27 2024
+Отправка команды: load text.txt в Wed Sep 18 21:10:27 2024
+
+Wed Sep 18 21:10:27 2024
+Получено от сервера: Hello world!
+ в Wed Sep 18 21:10:27 2024
+
+Wed Sep 18 21:10:27 2024
+Окончание соединения
+Wed Sep 18 21:10:39 2024
+Начало соединения
+Wed Sep 18 21:10:39 2024
+Отправка команды: load text.txt в Wed Sep 18 21:10:39 2024
+
+Wed Sep 18 21:10:39 2024
+Получено от сервера: Hello world!
+ в Wed Sep 18 21:10:39 2024
+
+Wed Sep 18 21:10:39 2024
+Окончание соединения
+Thu Sep 19 11:42:16 2024
+Начало соединения
+Thu Sep 19 11:42:16 2024
+Отправка команды: load text.txt в Thu Sep 19 11:42:16 2024
+
+Thu Sep 19 11:42:16 2024
+Получено от сервера: Hello world!
+ в Thu Sep 19 11:42:16 2024
+
+Thu Sep 19 11:42:16 2024
+Окончание соединения
+Fri Sep 20 10:24:22 2024
+Начало соединения
+Fri Sep 20 10:24:22 2024
+Отправка команды: �load text.txt в Fri Sep 20 10:24:22 2024
+
+Fri Sep 20 10:24:22 2024
+Получено от сервера: Неверный формат запроса
+ в Fri Sep 20 10:24:22 2024
+
+Fri Sep 20 10:24:22 2024
+Окончание соединения
+Fri Sep 20 10:24:35 2024
+Начало соединения
+Fri Sep 20 10:24:35 2024
+Отправка команды: load text.txt в Fri Sep 20 10:24:35 2024
+
+Fri Sep 20 10:24:35 2024
+Получено от сервера: Hello world!
+ в Fri Sep 20 10:24:35 2024
+
+Fri Sep 20 10:24:35 2024
+Окончание соединения
+Fri Sep 20 11:11:54 2024
+Начало соединения
+Fri Sep 20 11:12:08 2024
+Начало соединения
+Fri Sep 20 11:12:12 2024
+Начало соединения
+Fri Sep 20 11:12:14 2024
+Начало соединения
+Fri Sep 20 11:12:16 2024
+Начало соединения
+Fri Sep 20 11:13:40 2024
+Начало соединения
+Fri Sep 20 11:13:40 2024
+Отправка команды: load text.txt в Fri Sep 20 11:13:40 2024
+
+Fri Sep 20 11:13:40 2024
+Получено от сервера: Hello world!
+ в Fri Sep 20 11:13:40 2024
+
+Fri Sep 20 11:13:40 2024
+Окончание соединения
