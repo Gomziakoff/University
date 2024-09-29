@@ -1,0 +1,12 @@
+D:\progr\github\University\OMIS\lab2\20\obj\Debug\20.csproj.AssemblyReference.cache
+D:\progr\github\University\OMIS\lab2\20\obj\Debug\_20.AggregationDialog.resources
+D:\progr\github\University\OMIS\lab2\20\obj\Debug\_20.DependencyDialog.resources
+D:\progr\github\University\OMIS\lab2\20\obj\Debug\_20.Form1.resources
+D:\progr\github\University\OMIS\lab2\20\obj\Debug\_20.Properties.Resources.resources
+D:\progr\github\University\OMIS\lab2\20\obj\Debug\20.csproj.GenerateResource.cache
+D:\progr\github\University\OMIS\lab2\20\obj\Debug\20.csproj.CoreCompileInputs.cache
+D:\progr\github\University\OMIS\lab2\20\bin\Debug\20.exe.config
+D:\progr\github\University\OMIS\lab2\20\bin\Debug\20.exe
+D:\progr\github\University\OMIS\lab2\20\bin\Debug\20.pdb
+D:\progr\github\University\OMIS\lab2\20\obj\Debug\20.exe
+D:\progr\github\University\OMIS\lab2\20\obj\Debug\20.pdb

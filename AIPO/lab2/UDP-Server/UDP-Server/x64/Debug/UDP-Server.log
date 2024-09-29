@@ -1,7 +1,1 @@
-﻿  UDP-Server.cpp
-D:\progr\github\University\AIPO\lab2\UDP-Server\UDP-Server.cpp(43,62): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-D:\progr\github\University\AIPO\lab2\UDP-Server\UDP-Server.cpp(49,76): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-D:\progr\github\University\AIPO\lab2\UDP-Server\UDP-Server.cpp(54,72): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-  UDP-Server.vcxproj -> D:\progr\github\University\AIPO\lab2\UDP-Server\x64\Debug\UDP-Server.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
+﻿  UDP-Server.vcxproj -> D:\progr\github\University\AIPO\lab2\UDP-Server\x64\Debug\UDP-Server.exe
