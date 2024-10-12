@@ -17,21 +17,6 @@ class MLP:
     def sigmoid_derivative(self, x):
         return x * (1 - x)
 
-    def train_online(self,x,e):
-        #forward
-        yh = self.sigmoid(np.dot(x,self.Wh)+self.Th)
-        yo = self.sigmoid(np.dot(yh,self.Wo)+self.To)
-        #back
-        error = e - yo
-        deltao = error*self.sigmoid_derivative(yo)
-        hidden_error = deltao.dot(self.Wo.T)
-        deltah = hidden_error*self.sigmoid_derivative(yh)
-        #upd
-        self.Wo += yh.T.dot(deltao) * self.alpha
-        self.To += np.sum(deltao) * self.alpha
-        self.Wh += x.T.dot(deltah) * self.alpha
-        self.Th += np.sum(deltah) * self.alpha
-
     def train(self, x, e, batch_size):
         num_samples = x.shape[0]
 
