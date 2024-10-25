@@ -166,10 +166,10 @@ def collect_results(model_name, model, epochs, start_time):
 
 
 results_table = []
-lin_model = NN(alpha=0.005, n_samples=100, noise_ratio=0.3)
-lin_model_adapt = NN(alpha=0.005, n_samples=100, noise_ratio=0.3)
-batch_model = NN(alpha=0.005, n_samples=100, noise_ratio=0.3)
-batch_model_adapt = NN(alpha=0.005, n_samples=100, noise_ratio=0.3)
+lin_model = NN(alpha=0.005, n_samples=100, noise_ratio=0.1)
+lin_model_adapt = NN(alpha=0.005, n_samples=100, noise_ratio=0.1)
+batch_model = NN(alpha=0.005, n_samples=100, noise_ratio=0.1)
+batch_model_adapt = NN(alpha=0.005, n_samples=100, noise_ratio=0.1)
 
 x, y = lin_model.create_dataset()
 

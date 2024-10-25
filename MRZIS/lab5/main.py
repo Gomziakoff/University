@@ -117,7 +117,7 @@ class MLP:
 
 def run_model(mode, input_size=10, hide_size=4, output_size=1, alpha=0.2, batch_size=10, epochs=10000):
     model = MLP(input_size=input_size, hide_size=hide_size, output_size=output_size, alpha=alpha)
-    y, e, x_values = model.create_dataset()
+    y, e, x_values = model.create_dataset(noise_percentage=0)
     start_time = time.time()
 
     for epoch in range(epochs):
