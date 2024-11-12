@@ -8,3 +8,6 @@ D:\progr\github\University\OMIS\lab4\lab4\bin\Debug\lab4.exe
 D:\progr\github\University\OMIS\lab4\lab4\bin\Debug\lab4.pdb
 D:\progr\github\University\OMIS\lab4\lab4\obj\Debug\lab4.exe
 D:\progr\github\University\OMIS\lab4\lab4\obj\Debug\lab4.pdb
+D:\progr\github\University\OMIS\lab4\lab4\obj\Debug\lab4.MainForm.resources
+D:\progr\github\University\OMIS\lab4\lab4\obj\Debug\lab4.ViewListForm.resources
+D:\progr\github\University\OMIS\lab4\lab4\obj\Debug\lab4.EditRecordForm.resources

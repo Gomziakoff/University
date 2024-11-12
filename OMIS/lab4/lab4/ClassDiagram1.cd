@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="lab4.EditRecordForm">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAABCAAgBAAAACAAAACAAACAhAABQAAAAAAACA=</HashCode>
+      <FileName>EditRecordForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lab4.LoginForm">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAIAAAAECAAABAAAACAAAASAAAAAAAAAQAAAgAAAAA=</HashCode>
+      <FileName>LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lab4.MainForm">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACEAhAACAQAAABKACAAAASAEhSAAAAAAAAAwAAAAA=</HashCode>
+      <FileName>MainForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lab4.ViewListForm">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAACAAAAAAAACAAAACAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>ViewListForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="lab4.UserManager">
+    <Position X="2" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAACAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>UserManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
