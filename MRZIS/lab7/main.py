@@ -5,7 +5,7 @@ import time
 
 
 class MLP:
-    def __init__(self, input_size, hide_size, output_size, alpha, dropout_rate=0.5):
+    def __init__(self, input_size, hide_size, output_size, alpha, dropout_rate=0.0,elastic_net_alpha=0.0, l1_ratio=0.5, loss_func = "mse"):
         self.input_size = input_size
         self.output_size = output_size
         self.hide_size = hide_size
@@ -15,121 +15,162 @@ class MLP:
         self.To = np.random.uniform(size=(1, output_size))
         self.alpha = alpha
         self.dropout_rate = dropout_rate
+        self.dropout_mask = None
+        self.elastic_net_alpha = elastic_net_alpha
+        self.l1_ratio = l1_ratio
+        self.loss_func = loss_func
 
-    def create_dataset(self, noise_percentage=0.1):
+    def tanh(self, x):
+        return np.tanh(x)
+
+    def tanh_derivative(self, x):
+        return 1 - np.tanh(x) ** 2
+
+    def apply_regularization(self, weights):
+        l1_term = self.l1_ratio * np.sign(weights)  # L1 регуляризация
+        l2_term = (1 - self.l1_ratio) * weights  # L2 регуляризация
+        return self.elastic_net_alpha * (l1_term + l2_term)
+
+    def apply_dropout(self, layer_output):
+        if self.dropout_rate > 0:
+            # Create a mask with 1s and 0s based on dropout_rate
+            self.dropout_mask = np.random.binomial(1, 1 - self.dropout_rate, size=layer_output.shape)
+            return layer_output * self.dropout_mask  # Apply mask
+        return layer_output
+
+    def create_dataset(self, noise_percentage=0.5):
         func = lambda a, b, c, d, x: a * np.cos(b * x) + c * np.sin(d * x)
         x = np.arange(0, 15, 0.1)
         y = func(0.1, 0.3, 0.08, 3, x)
         y = np.array([y[i - self.input_size: i] for i in range(self.input_size, len(y))])
         e = np.array([y[i + self.input_size][0] for i in range(len(y) - self.input_size)])
 
-        # Apply noise
+        # Calculate the number of noisy points based on the noise_percentage
         num_noisy_points = int(len(e) * (noise_percentage))
         noisy_indices = np.random.choice(len(e), num_noisy_points, replace=False)
-        noise = np.random.uniform(-0.1, 0.1, size=num_noisy_points)
-        e[noisy_indices] += noise
+
+        # Apply noise to the selected indices of e
+        noise = np.random.uniform(-0.1, 0.1, size=num_noisy_points)  # Adjust the range of noise
+        e[noisy_indices] += noise  # Add noise to the selected indices
 
         return y[:len(y) - self.input_size], e, x[:len(y) - self.input_size]
 
-    def sigmoid(self, x):
-        return 1 / (1 + np.exp(-x))
+    def train(self, x, e, batch_size):
+        num_samples = x.shape[0]
+        for start in range(0, num_samples, batch_size):
+            end = start + batch_size
+            x_batch = x[start:min(end, num_samples)]
+            e_batch = e[start:min(end, num_samples)].reshape(-1, self.output_size)
+            yh = self.tanh(np.dot(x_batch, self.Wh) + self.Th)
+            yh = self.apply_dropout(yh)
+            # Output layer calculation
+            yo = np.dot(yh, self.Wo) + self.To
+            if self.loss_func == "mae":
+                error = e_batch - yo
+                deltao = self.sign(error) * self.tanh_derivative(yo)
+                hidden_error = deltao.dot(self.Wo.T)
+                deltah = self.sign(hidden_error) * self.tanh_derivative(yh)
 
-    def sigmoid_derivative(self, x):
-        return x * (1 - x)
+                if self.dropout_rate > 0:
+                    deltah *= self.dropout_mask
 
-    def dropout(self, layer_output):
-        # Apply dropout to hidden layer
-        mask = np.random.binomial(1, 1 - self.dropout_rate, size=layer_output.shape)
-        return layer_output * mask
+                self.Wo += yh.T.dot(deltao) * self.alpha / x_batch.shape[0] - self.apply_regularization(self.Wo)
+                self.To += np.sum(deltao, axis=0, keepdims=True) * self.alpha / x_batch.shape[0]
+                self.Wh += x_batch.T.dot(deltah) * self.alpha / x_batch.shape[0] - self.apply_regularization(self.Wh)
+                self.Th += np.sum(deltah, axis=0, keepdims=True) * self.alpha / x_batch.shape[0]
+            elif self.loss_func == "mse":
+                error = e_batch - yo
+                deltao = error * self.tanh_derivative(yo)
+                hidden_error = deltao.dot(self.Wo.T)
+                deltah = hidden_error * self.tanh_derivative(yh)
 
-    def forward(self, X):
-        # Hidden layer
-        self.hidden_input = np.dot(X, self.Wh) - self.Th
-        self.hidden_output = self.sigmoid(self.hidden_input)
+                if self.dropout_rate > 0:
+                    deltah *= self.dropout_mask
 
-        # Apply dropout
-        self.hidden_output = self.dropout(self.hidden_output)
+                self.Wo += yh.T.dot(deltao) * self.alpha / x_batch.shape[0] - self.apply_regularization(self.Wo)
+                self.To += np.sum(deltao, axis=0, keepdims=True) * self.alpha / x_batch.shape[0]
+                self.Wh += x_batch.T.dot(deltah) * self.alpha / x_batch.shape[0] - self.apply_regularization(self.Wh)
+                self.Th += np.sum(deltah, axis=0, keepdims=True) * self.alpha / x_batch.shape[0]
 
-        # Output layer
-        self.output_input = np.dot(self.hidden_output, self.Wo) - self.To
-        self.output = self.sigmoid(self.output_input)
+    def test(self, x):
+        yh = self.tanh(np.dot(x, self.Wh) + self.Th)
+        yo = np.dot(yh, self.Wo) + self.To
+        return yo.flatten()
 
-        return self.output
+    def mean_squared_error(self, true_values, predictions):
+        return np.mean((true_values - predictions) ** 2)
 
-    def backward(self, X, y_true, output):
-        # Output layer error and gradient
-        error = y_true - output
-        output_gradient = error * self.sigmoid_derivative(output)
+    def mean_absolute_error(self, true_values, predictions):
+        return np.mean(np.abs(true_values - predictions))
 
-        # Hidden layer error and gradient
-        hidden_error = output_gradient.dot(self.Wo.T)
-        hidden_gradient = hidden_error * self.sigmoid_derivative(self.hidden_output)
+    def sign(self, x):
+        result = np.sign(x)  # NumPy встроенная функция
+        result[result == 0] = 0   # Обработка нулей
+        return result
 
-        # Reshape X for proper matrix multiplication
-        X = X.reshape(1, -1)  # Ensure X is 2D: (1, input_size)
-
-        # Update weights and biases
-        self.Wo += self.hidden_output.T.dot(output_gradient) * self.alpha
-        self.To -= np.sum(output_gradient, axis=0) * self.alpha
-        self.Wh += X.T.dot(hidden_gradient) * self.alpha
-        self.Th -= np.sum(hidden_gradient, axis=0) * self.alpha
-
-        return error
-
-    def train(self, X_train, y_train, epochs=100, loss_func="MSE"):
-        errors = []
-        for epoch in range(epochs):
-            for X, y in zip(X_train, y_train):
-                output = self.forward(X)
-                error = self.backward(X, y, output)
-
-            if loss_func == "MSE":
-                error_value = np.mean(np.square(y_train - self.forward(X_train)))
-            elif loss_func == "MAE":
-                error_value = np.mean(np.abs(y_train - self.forward(X_train)))
-
-            errors.append(error_value)
-            print(f'Epoch {epoch + 1}/{epochs}, Error: {error_value}')
-
-        return errors
-
-    def test(self, X_test, y_test, loss_func="MSE"):
-        output = self.forward(X_test)
-        if loss_func == "MSE":
-            return np.mean(np.square(y_test - output))
-        elif loss_func == "MAE":
-            return np.mean(np.abs(y_test - output))
-
-    def plot_results(self, X_test, y_test, loss_func="MSE"):
-        # Get predictions from the model
-        y_pred = []
-        for X in X_test:
-            y_pred.append(self.forward(X))
-        y_pred = np.array(y_pred).flatten()
-
-        # Plot true vs predicted values
-        plt.figure(figsize=(10, 6))
-        plt.plot(y_test, label='True Function', color='blue')
-        plt.plot(y_pred, label='Predicted Function', color='red', linestyle='--')
-        plt.title(f'True vs Predicted Function (Loss: {loss_func})')
-        plt.xlabel('Sample')
-        plt.ylabel('Function Value')
+    def draw_test_on_interval(self, start, end,e, step=0.1):
+        x_new = np.arange(start, end, step)
+        func = lambda a, b, c, d, x: a * np.cos(b * x) + c * np.sin(d * x)
+        y_new = func(0.1, 0.3, 0.08, 3, x_new)
+        y_input = np.array([y_new[i - self.input_size: i] for i in range(self.input_size, len(y_new))])
+        predictions = self.test(y_input)
+        x_new_cropped = x_new[self.input_size:]
+        print(e[:10])
+        print(y_new[self.input_size:20])
+        plt.figure(figsize=(12, 6))
+        plt.plot(x_new_cropped, y_new[self.input_size:], label='Original Function', color='blue')
+        plt.plot(x_new_cropped, predictions, label='Predictions', color='red', linestyle='dashed')
+        plt.plot(x_new_cropped[:len(e)], e, label='noise', color='green', linestyle='dashed')
+        plt.xlabel('X values')
+        plt.ylabel('Function value')
+        plt.title('Original Function vs. Predictions')
         plt.legend()
+        plt.grid()
         plt.show()
 
 
-# Example usage
-model = MLP(10, 4, 1, 0.1, dropout_rate=0.)
-X, y, _ = model.create_dataset(noise_percentage=0.)
-train_errors = model.train(X, y, epochs=200, loss_func="MSE")
-test_error = model.test(X, y, loss_func="MSE")
+def run_model(input_size=10, hide_size=4, output_size=1, alpha=0.2, batch_size=10, epochs=10000, noise = 0.,dropout_rate=0., elastic_net_alpha=0.0, l1_ratio=0.5, loss_func="mse"):
+    model = MLP(input_size=input_size, hide_size=hide_size, output_size=output_size, alpha=alpha, dropout_rate=dropout_rate,elastic_net_alpha=elastic_net_alpha,l1_ratio=l1_ratio,loss_func=loss_func)
+    y, e, x_values = model.create_dataset(noise_percentage=noise)
+    start_time = time.time()
 
-# Plot training error over time
-plt.plot(train_errors)
-plt.title('Training Error (MSE)')
-plt.xlabel('Epoch')
-plt.ylabel('Error')
-plt.show()
+    for epoch in range(epochs):
+        model.train(y, e, batch_size)
+        if (epoch + 1) % 100 == 0:
+            predictions = model.test(y)
+            mse = model.mean_squared_error(e, predictions) if loss_func == "mse" else model.mean_absolute_error(e, predictions)
+            print(f'Epoch {epoch + 1}, {loss_func}: {mse}')
 
-# Plot results: true vs predicted values
-model.plot_results(X, y, loss_func="MSE")
+    training_time = time.time() - start_time
+    predictions = model.test(y)
+    mse = model.mean_squared_error(e, predictions)
+    model.draw_test_on_interval(0,50,e)
+
+    return mse, training_time, epochs, loss_func
+
+
+def show_results_table(results):
+    df = pd.DataFrame(results, columns=['Model Type', 'Test Error','loss_func', 'Epochs', 'Training Time (s)'])
+    print(df)
+
+
+# Run and collect results for different models
+results = []
+mse, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0., elastic_net_alpha=0., loss_func="mse")
+results.append(["Just MSE", mse,loss_func, epochs, training_time])
+
+mse, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0., elastic_net_alpha=0.,  loss_func="mae")
+results.append(["Just MAE", mse,loss_func, epochs, training_time])
+
+mse, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0.25, elastic_net_alpha=0., loss_func="mse")
+results.append(["MSE drop", mse,loss_func, epochs, training_time])
+
+mse, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0.25, elastic_net_alpha=0.,  loss_func="mae")
+results.append(["MAE drop", mse,loss_func, epochs, training_time])
+
+mse, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0., elastic_net_alpha=0.000001, loss_func="mse")
+results.append(["MSE elasticnet", mse,loss_func, epochs, training_time])
+
+mse, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0., elastic_net_alpha=0.000001,  loss_func="mae")
+results.append(["MAE elasticnet", mse,loss_func, epochs, training_time])
+show_results_table(results)

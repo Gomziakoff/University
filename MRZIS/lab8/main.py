@@ -9,10 +9,8 @@ from tqdm import tqdm
 import time
 import matplotlib.pyplot as plt
 
-# Определение устройства
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# Загрузка и преобразование данных MNIST
 transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.5,), (0.5,))
@@ -20,12 +18,11 @@ transform = transforms.Compose([
 
 train_dataset = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transform)
 test_dataset = torchvision.datasets.MNIST(root='./data', train=False, download=True, transform=transform)
-
+print(len(train_dataset), len(test_dataset))
 train_loader = DataLoader.DataLoader(dataset=train_dataset, batch_size=64, shuffle=True)
 test_loader = DataLoader.DataLoader(dataset=test_dataset, batch_size=64, shuffle=False)
 
 
-# Определение нейронной сети
 class CustomMNISTNet(nn.Module):
     def __init__(self):
         super(CustomMNISTNet, self).__init__()
@@ -46,29 +43,25 @@ class CustomMNISTNet(nn.Module):
         return x
 
 
-# Инициализация сети, функции потерь и оптимизатора
 model = CustomMNISTNet().to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.RMSprop(model.parameters(), lr=0.001)
 
-# Переменные для отслеживания метрик
 train_losses = []
+train_accuracies = []
 test_accuracies = []
 
 
-# Функция для обучения модели
 def train_model(model, train_loader, criterion, optimizer, num_epochs=10):
     model.train()
     for epoch in range(num_epochs):
         running_loss = 0.0
         start_time = time.time()
 
-        # Прогресс-бар с логами времени
         with tqdm(total=len(train_loader), desc=f"Epoch {epoch + 1}/{num_epochs}") as pbar:
             for i, (images, labels) in enumerate(train_loader):
                 images, labels = images.to(device), labels.to(device)
 
-                # Обнуление градиентов
                 optimizer.zero_grad()
                 outputs = model(images)
                 loss = criterion(outputs, labels)
@@ -77,7 +70,6 @@ def train_model(model, train_loader, criterion, optimizer, num_epochs=10):
 
                 running_loss += loss.item()
 
-                # Обновление прогресс-бара и расчет времени
                 elapsed_time = time.time() - start_time
                 time_per_batch = elapsed_time / (i + 1)
                 remaining_time = time_per_batch * (len(train_loader) - (i + 1))
@@ -86,31 +78,37 @@ def train_model(model, train_loader, criterion, optimizer, num_epochs=10):
 
         avg_loss = running_loss / len(train_loader)
         train_losses.append(avg_loss)
-        print(f"Epoch [{epoch + 1}/{num_epochs}], Loss: {avg_loss:.4f}")
+
+        # Calculate and log accuracies
+        train_accuracy = evaluate_model(model, train_loader, for_train=True)
+        test_accuracy = evaluate_model(model, test_loader)
+        train_accuracies.append(train_accuracy)
+        test_accuracies.append(test_accuracy)
+
+        print(
+            f"Epoch [{epoch + 1}/{num_epochs}], Loss: {avg_loss:.4f}, Train Accuracy: {train_accuracy:.2f}%, Test Accuracy: {test_accuracy:.2f}%")
 
 
-# Функция для тестирования модели
-def evaluate_model(model, test_loader):
+def evaluate_model(model, loader, for_train=False):
     model.eval()
     correct = 0
     total = 0
     with torch.no_grad():
-        for images, labels in test_loader:
+        for images, labels in loader:
             images, labels = images.to(device), labels.to(device)
             outputs = model(images)
             _, predicted = torch.max(outputs.data, 1)
             total += labels.size(0)
             correct += (predicted == labels).sum().item()
     accuracy = 100 * correct / total
-    test_accuracies.append(accuracy)
-    print(f'Accuracy of the network on the test images: {accuracy:.2f}%')
+    if not for_train:
+        print(f'Accuracy of the network on the test images: {accuracy:.2f}%')
     return accuracy
 
 
-# Функция для построения графиков
 def plot_metrics():
     # График функции потерь
-    plt.figure(figsize=(10, 5))
+    plt.figure(figsize=(12, 5))
     plt.subplot(1, 2, 1)
     plt.plot(train_losses, label='Training Loss')
     plt.xlabel('Epochs')
@@ -118,12 +116,13 @@ def plot_metrics():
     plt.title('Training Loss over Epochs')
     plt.legend()
 
-    # График точности
+    # График точности для тренировки и теста
     plt.subplot(1, 2, 2)
+    plt.plot(train_accuracies, label='Train Accuracy', color='blue')
     plt.plot(test_accuracies, label='Test Accuracy', color='orange')
     plt.xlabel('Epochs')
     plt.ylabel('Accuracy (%)')
-    plt.title('Test Accuracy over Epochs')
+    plt.title('Train and Test Accuracy over Epochs')
     plt.legend()
 
     # Показ графиков
@@ -131,7 +130,6 @@ def plot_metrics():
     plt.show()
 
 
-# Использование MLFlow для трекинга
 mlflow.start_run()
 mlflow.log_param("optimizer", "RMSprop")
 mlflow.log_param("loss_function", "CrossEntropyLoss")
@@ -139,10 +137,10 @@ mlflow.log_param("batch_size", 64)
 mlflow.log_param("epochs", 10)
 
 train_model(model, train_loader, criterion, optimizer, num_epochs=10)
-accuracy = evaluate_model(model, test_loader)
 
+# Log final test accuracy
+accuracy = test_accuracies[-1] if test_accuracies else 0.0
 mlflow.log_metric("accuracy", accuracy)
 mlflow.end_run()
 
-# Построение графиков
 plot_metrics()
