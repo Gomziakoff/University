@@ -27,13 +27,12 @@ class MLP:
         return 1 - np.tanh(x) ** 2
 
     def apply_regularization(self, weights):
-        l1_term = self.l1_ratio * np.sign(weights)  # L1 регуляризация
-        l2_term = (1 - self.l1_ratio) * weights  # L2 регуляризация
+        l1_term = self.l1_ratio * np.abs(np.sum(weights))  # L1 регуляризация
+        l2_term = (1 - self.l1_ratio) * np.sum(weights**2)  # L2 регуляризация
         return self.elastic_net_alpha * (l1_term + l2_term)
 
     def apply_dropout(self, layer_output):
         if self.dropout_rate > 0:
-            # Create a mask with 1s and 0s based on dropout_rate
             self.dropout_mask = np.random.binomial(1, 1 - self.dropout_rate, size=layer_output.shape)
             return layer_output * self.dropout_mask  # Apply mask
         return layer_output
@@ -45,13 +44,11 @@ class MLP:
         y = np.array([y[i - self.input_size: i] for i in range(self.input_size, len(y))])
         e = np.array([y[i + self.input_size][0] for i in range(len(y) - self.input_size)])
 
-        # Calculate the number of noisy points based on the noise_percentage
         num_noisy_points = int(len(e) * (noise_percentage))
         noisy_indices = np.random.choice(len(e), num_noisy_points, replace=False)
 
-        # Apply noise to the selected indices of e
         noise = np.random.uniform(-0.1, 0.1, size=num_noisy_points)  # Adjust the range of noise
-        e[noisy_indices] += noise  # Add noise to the selected indices
+        e[noisy_indices] += noise
 
         return y[:len(y) - self.input_size], e, x[:len(y) - self.input_size]
 
@@ -67,9 +64,9 @@ class MLP:
             yo = np.dot(yh, self.Wo) + self.To
             if self.loss_func == "mae":
                 error = e_batch - yo
-                deltao = self.sign(error) * self.tanh_derivative(yo)
+                deltao = error/(2*np.abs(error)) * self.tanh_derivative(yo)
                 hidden_error = deltao.dot(self.Wo.T)
-                deltah = self.sign(hidden_error) * self.tanh_derivative(yh)
+                deltah = hidden_error/(2*np.abs(hidden_error)) * self.tanh_derivative(yh)
 
                 if self.dropout_rate > 0:
                     deltah *= self.dropout_mask
@@ -93,8 +90,8 @@ class MLP:
                 self.Th += np.sum(deltah, axis=0, keepdims=True) * self.alpha / x_batch.shape[0]
 
     def test(self, x):
-        yh = self.tanh(np.dot(x, self.Wh) + self.Th)
-        yo = np.dot(yh, self.Wo) + self.To
+        yh = self.tanh(np.dot(x, self.Wh) + self.Th)*(1-self.dropout_rate)
+        yo = (np.dot(yh, self.Wo) + self.To)
         return yo.flatten()
 
     def mean_squared_error(self, true_values, predictions):
@@ -102,6 +99,9 @@ class MLP:
 
     def mean_absolute_error(self, true_values, predictions):
         return np.mean(np.abs(true_values - predictions))
+
+    def calc_MAPE(self,true_values, predictions):
+        return np.mean(np.abs((true_values - predictions) / true_values))
 
     def sign(self, x):
         result = np.sign(x)  # NumPy встроенная функция
@@ -144,33 +144,39 @@ def run_model(input_size=10, hide_size=4, output_size=1, alpha=0.2, batch_size=1
     training_time = time.time() - start_time
     predictions = model.test(y)
     mse = model.mean_squared_error(e, predictions)
+    mape = model.calc_MAPE(e, predictions)
     model.draw_test_on_interval(0,50,e)
 
-    return mse, training_time, epochs, loss_func
+    return mse, mape,training_time, epochs, loss_func
 
 
 def show_results_table(results):
-    df = pd.DataFrame(results, columns=['Model Type', 'Test Error','loss_func', 'Epochs', 'Training Time (s)'])
+    df = pd.DataFrame(results, columns=['Model Type', 'Test Error','mape','loss_func', 'Epochs', 'Training Time (s)'])
     print(df)
 
-
-# Run and collect results for different models
 results = []
-mse, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0., elastic_net_alpha=0., loss_func="mse")
-results.append(["Just MSE", mse,loss_func, epochs, training_time])
+mse, mape, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.,dropout_rate=0., elastic_net_alpha=0., loss_func="mse")
+results.append(["Just MSE", mse,mape,loss_func, epochs, training_time])
 
-mse, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0., elastic_net_alpha=0.,  loss_func="mae")
-results.append(["Just MAE", mse,loss_func, epochs, training_time])
+mse, mape,training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.,dropout_rate=0., elastic_net_alpha=0.,  loss_func="mae")
+results.append(["Just MAE", mse,mape,loss_func, epochs, training_time])
 
-mse, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0.25, elastic_net_alpha=0., loss_func="mse")
-results.append(["MSE drop", mse,loss_func, epochs, training_time])
+mse, mape,training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0.25, elastic_net_alpha=0., loss_func="mse")
+results.append(["MSE drop", mse,mape,loss_func, epochs, training_time])
 
-mse, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0.25, elastic_net_alpha=0.,  loss_func="mae")
-results.append(["MAE drop", mse,loss_func, epochs, training_time])
+mse,mape, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0.25, elastic_net_alpha=0.,  loss_func="mae")
+results.append(["MAE drop", mse,mape,loss_func, epochs, training_time])
 
-mse, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0., elastic_net_alpha=0.000001, loss_func="mse")
-results.append(["MSE elasticnet", mse,loss_func, epochs, training_time])
+mse,mape, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0., elastic_net_alpha=0.000001, loss_func="mse")
+results.append(["MSE elasticnet", mse,mape,loss_func, epochs, training_time])
 
-mse, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0., elastic_net_alpha=0.000001,  loss_func="mae")
-results.append(["MAE elasticnet", mse,loss_func, epochs, training_time])
+mse,mape, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0., elastic_net_alpha=0.000001,  loss_func="mae")
+results.append(["MAE elasticnet", mse,mape,loss_func, epochs, training_time])
+
+mse, mape,training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0.25, elastic_net_alpha=0.000001,  loss_func="mse")
+results.append(["MSE all", mse,mape,loss_func, epochs, training_time])
+
+mse,mape, training_time, epochs, loss_func = run_model(batch_size=10,hide_size=4, epochs=10000,noise=0.5,dropout_rate=0.25, elastic_net_alpha=0.000001,  loss_func="mae")
+results.append(["MAE all", mse,mape,loss_func, epochs, training_time])
+
 show_results_table(results)
