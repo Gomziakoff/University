@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\viewlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|d:\\progr\\github\\university\\omis\\lab4\\lab4\\viewlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:viewlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|d:\\progr\\github\\university\\omis\\lab4\\lab4\\editrecordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:editrecordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\editrecordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:editrecordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\editrecordform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:editrecordform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
-      "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,8 +19,28 @@
       "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\editrecordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:editrecordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\editrecordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:editrecordform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\editrecordform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:editrecordform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:classdiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C44FB08-7DF2-4E38-A3F7-E0AFF4E65AEB}|lab4.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -60,73 +60,77 @@
               "RelativeDocumentMoniker": "ViewListForm.cs",
               "ToolTip": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\ViewListForm.cs",
               "RelativeToolTip": "ViewListForm.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAmwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T09:06:46.211Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "UserManager.cs",
               "DocumentMoniker": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\UserManager.cs",
               "RelativeDocumentMoniker": "UserManager.cs",
               "ToolTip": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\UserManager.cs",
               "RelativeToolTip": "UserManager.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwBYAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T09:05:45.012Z"
+              "WhenOpened": "2024-11-23T09:05:45.012Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\LoginForm.cs",
               "RelativeDocumentMoniker": "LoginForm.cs",
               "ToolTip": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\LoginForm.cs",
               "RelativeToolTip": "LoginForm.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBgAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwBgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T09:05:20.735Z"
+              "WhenOpened": "2024-11-23T09:05:20.735Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ClassDiagram1.cd",
               "DocumentMoniker": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\ClassDiagram1.cd",
               "RelativeDocumentMoniker": "ClassDiagram1.cd",
-              "ToolTip": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\ClassDiagram1.cd*",
-              "RelativeToolTip": "ClassDiagram1.cd*",
+              "ToolTip": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\ClassDiagram1.cd",
+              "RelativeToolTip": "ClassDiagram1.cd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
-              "WhenOpened": "2024-11-06T09:51:32.393Z"
+              "WhenOpened": "2024-11-06T09:51:32.393Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "LoginForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\LoginForm.cs",
               "RelativeDocumentMoniker": "LoginForm.cs",
               "ToolTip": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\LoginForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "LoginForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T20:38:58.181Z"
+              "WhenOpened": "2024-10-28T20:38:58.181Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "EditRecordForm.Designer.cs",
               "DocumentMoniker": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\EditRecordForm.Designer.cs",
               "RelativeDocumentMoniker": "EditRecordForm.Designer.cs",
               "ToolTip": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\EditRecordForm.Designer.cs",
               "RelativeToolTip": "EditRecordForm.Designer.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwBwAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAzwBwAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-28T20:27:07.452Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "EditRecordForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\EditRecordForm.cs",
               "RelativeDocumentMoniker": "EditRecordForm.cs",
@@ -138,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "EditRecordForm.cs",
               "DocumentMoniker": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\EditRecordForm.cs",
               "RelativeDocumentMoniker": "EditRecordForm.cs",
@@ -146,22 +150,24 @@
               "RelativeToolTip": "EditRecordForm.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAkwDUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T20:25:12.526Z"
+              "WhenOpened": "2024-10-28T20:25:12.526Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T19:34:42.244Z"
+              "WhenOpened": "2024-10-28T19:34:42.244Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "MainForm.cs",
               "DocumentMoniker": "D:\\progr\\github\\University\\OMIS\\lab4\\lab4\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
@@ -169,7 +175,8 @@
               "RelativeToolTip": "MainForm.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwB0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T10:02:01.23Z"
+              "WhenOpened": "2024-10-19T10:02:01.23Z",
+              "EditorCaption": ""
             }
           ]
         }

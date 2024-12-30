@@ -36,6 +36,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.calc_button = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.addList_button = new System.Windows.Forms.Button();  // Новая кнопка
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.selectedTB = new System.Windows.Forms.TextBox();
@@ -114,6 +115,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.addList_button);  // Размещение новой кнопки
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.selectedTB);
@@ -127,6 +129,16 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "List";
+            // 
+            // addList_button
+            // 
+            this.addList_button.Location = new System.Drawing.Point(156, 193);  // Позиция новой кнопки
+            this.addList_button.Name = "addList_button";
+            this.addList_button.Size = new System.Drawing.Size(75, 23);
+            this.addList_button.TabIndex = 12;
+            this.addList_button.Text = "Add List";
+            this.addList_button.UseVisualStyleBackColor = true;
+            this.addList_button.Click += new System.EventHandler(this.addList_button_Click);  // Обработчик события
             // 
             // label4
             // 
@@ -174,7 +186,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(7, 22);
+            this.listBox1.Location = new System.Drawing.Point(18, 21);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(128, 196);
             this.listBox1.TabIndex = 0;
@@ -194,7 +206,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -207,6 +218,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button calc_button;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button addList_button;  // Добавлено в код
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox selectedTB;
@@ -215,4 +227,3 @@
         private System.Windows.Forms.ListBox listBox1;
     }
 }
-

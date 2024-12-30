@@ -18,12 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -44,7 +40,7 @@
               "RelativeDocumentMoniker": "3_1.cpp",
               "ToolTip": "D:\\progr\\github\\University\\OMIS\\lab3\\3_1\\3_1.cpp",
               "RelativeToolTip": "3_1.cpp",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-10-18T16:35:11.079Z",
               "EditorCaption": ""
