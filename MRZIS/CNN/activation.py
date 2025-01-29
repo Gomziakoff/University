@@ -2,7 +2,9 @@ import numpy as np
 
 class ReLUActivationLayer:
     def __init__(self,size):
+        self.X = None
         self.size = size
+
     def ReLU(self,X):
         out = np.maximum(X,0)
         return out
@@ -12,11 +14,12 @@ class ReLUActivationLayer:
         return out
 
     def forward(self,X):
+        self.X=X
         out = self.ReLU(X)
         return out
 
-    def backward(self,dout,X):
-        out = dout*self.ReLU_derivative(X)
+    def backward(self,dout):
+        out = dout*self.ReLU_derivative(self.X)
         return out
 
 if __name__ == '__main__':
@@ -36,4 +39,4 @@ if __name__ == '__main__':
     print(img.shape)
     a = model.forward(img)
     print(a[:,:,0])
-    print(model.backward(a*10,img)[:,:,0])
+    print(model.backward(a*10)[:,:,0])

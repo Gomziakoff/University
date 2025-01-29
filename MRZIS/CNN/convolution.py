@@ -17,7 +17,7 @@ class ConvLayer:
         self.padding = padding
         self.stride = stride
 
-        self.W = np.random.rand(fc,fs,fs,self.fd)
+        self.W = np.random.uniform(-0.1, 0.1, size=(fc, fs, fs, self.fd))
         self.dW = np.zeros((fc, fs, fs, self.fd))
 
         self.b = np.random.rand(fc)
@@ -25,9 +25,9 @@ class ConvLayer:
 
 
     def forward(self, X):
+        self.X = X
         feature_maps = np.zeros((self.outwidth,self.outheight,self.outdepth))
         for W_num in range(self.fc):
-            print("Filter ", W_num + 1)
             curr_filter = self.W[W_num,:]
             conv_map = self.conv_(X[:, :, 0], curr_filter[:, :, 0])
             for ch_num in range(1, curr_filter.shape[-1]):
@@ -58,7 +58,7 @@ class ConvLayer:
                 result[r // self.stride, c // self.stride] = conv_sum  # Привязка к результату
         return result
 
-    def backward(self, dout, X):
+    def backward(self, dout):
         dX = np.zeros((self.height, self.width, self.depth))
 
         # Calculate gradients for weights and biases
@@ -74,7 +74,7 @@ class ConvLayer:
 
                             if 0 <= y_pos < self.height and 0 <= x_pos < self.width:
                                 for c in range(self.fd):
-                                    self.dW[f, y, x, c] += delta * X[y_pos, x_pos, c]
+                                    self.dW[f, y, x, c] += delta * self.X[y_pos, x_pos, c]
 
                     self.db[f] += delta
 
@@ -101,21 +101,21 @@ class ConvLayer:
 
     def set_weights(self, weights, num):
         self.W[:,:,:,num] = weights
-        print(self.W[:,:,:,num])
+
 
     def set_bias(self, bias, num):
         self.b[num] = bias
 
 if __name__ == '__main__':
-    conv1 = ConvLayer((4,4,2),2,3,0,1)
-    conv1.set_weights([[[1,4,1],[1,4,3],[3,3,1]]],0)
-    conv1.set_bias(0,0)
-    img = np.array([[[4,5,8,7],[1,8,8,8],[3,6,6,4],[6,5,7,8]],[[4,5,8,7],[1,8,8,8],[3,6,6,4],[6,5,7,8]]])
-    img = np.transpose(img,(1,2,0))
-    print(conv1.forward(img)[:,:,0])
-    dout = np.array([[[2,1],[4,4]]])
-    dout = np.transpose(dout,(1,2,0))
+    conv1 = ConvLayer((4, 4, 1), 1, 3, 0, 1)
+    conv1.set_weights([[[1, 4, 1], [1, 4, 3], [3, 3, 1]]], 0)
+    conv1.set_bias(0, 0)
+    img = np.array([[[4, 5, 8, 7], [1, 8, 8, 8], [3, 6, 6, 4], [6, 5, 7, 8]]])
+    img = np.transpose(img, (1, 2, 0))
+    print(conv1.forward(img)[:, :, 0])
+    dout = np.array([[[2, 1], [4, 4]]])
+    dout = np.transpose(dout, (1, 2, 0))
     print(dout)
-    print(conv1.backward(dout,img)[:,:,0])
+    print(conv1.backward(dout)[:, :, 0])
 
 
