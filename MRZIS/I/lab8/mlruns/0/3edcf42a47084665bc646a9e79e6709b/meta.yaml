@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/progr/github/University/MRZIS/lab8/mlruns/0/3edcf42a47084665bc646a9e79e6709b/artifacts
+end_time: 1732313318475
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3edcf42a47084665bc646a9e79e6709b
+run_name: suave-hound-96
+run_uuid: 3edcf42a47084665bc646a9e79e6709b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732313290132
+status: 3
+tags: []
+user_id: lesha
