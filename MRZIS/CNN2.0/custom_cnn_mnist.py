@@ -1,130 +1,172 @@
-import numpy as np
+import torch
 import pickle
 import matplotlib.pyplot as plt
 import time
-
-from utils.custom_cnn_model import CustomCNN
-from tqdm import tqdm
 import struct
-import math
+from tqdm import tqdm
+from utils.custom_cnn_model import CustomCNN
+import numpy as np
 
-# read the images and labels
-def readDataset(dataset_path):
-    (image_path, label_path) = dataset_path
-    with open(label_path, "rb") as label_file:
-        magic, dataset_size = struct.unpack(">II", label_file.read(8))
-        label_dataset = np.fromfile(label_file, dtype = np.int8)
-    with open(image_path, "rb") as image_file:
-        magic, dataset_size, rows, columns = struct.unpack(">IIII", image_file.read(16))
-        image_dataset = np.fromfile(image_file, dtype = np.uint8).reshape(len(label_dataset), rows, columns)
-    return (image_dataset, label_dataset)
 
-# normalise the dataset
-def normalise(image):
-    image -= image.min()
-    image = image / image.max()
-    image = (image - np.mean(image)) / np.std(image)
-    return image
+def evaluate(model, X, y, batch_size=256):
+    model_copy = model.extract_model()
+    total_errors = 0
+    num_samples = X.size(0)  # Общее количество примеров
+    num_batches = (num_samples + batch_size - 1) // batch_size
 
-# generate random-shuffled mini-batches
-def random_mini_batches(image, label, mini_batch_size = 256, one_batch = False):
-    dataset_size = image.shape[0] # number of training examples
-    mini_batches = []
-    # shuffle (image, label)
-    permutation = list(np.random.permutation(dataset_size))
-    shuffled_image = image[permutation, :, :, :]
-    shuffled_label = label[permutation]
-    # extract only one batch
-    if one_batch:
-        mini_batch_image = shuffled_image[0: mini_batch_size, :, :, :]
-        mini_batch_label = shuffled_label[0: mini_batch_size]
-        return (mini_batch_image, mini_batch_label)
-    # partition (shuffled_image, shuffled_label). Minus the end case.
-    complete_minibatches_number = math.floor(dataset_size / mini_batch_size) # number of mini batches of size mini_batch_size in your partitionning
-    for k in range(0, complete_minibatches_number):
-        mini_batch_image = shuffled_image[k * mini_batch_size: k * mini_batch_size + mini_batch_size, :, :, :]
-        mini_batch_label = shuffled_label[k * mini_batch_size: k * mini_batch_size + mini_batch_size]
-        mini_batch = (mini_batch_image, mini_batch_label)
-        mini_batches.append(mini_batch)
-    # handle the end case (last mini-batch < mini_batch_size)
-    if dataset_size % mini_batch_size != 0:
-        mini_batch_image = shuffled_image[complete_minibatches_number * mini_batch_size: dataset_size, :, :, :]
-        mini_batch_label = shuffled_label[complete_minibatches_number * mini_batch_size: dataset_size]
-        mini_batch = (mini_batch_image, mini_batch_label)
-        mini_batches.append(mini_batch)
-    return mini_batches
+    with torch.no_grad():
+        for i in range(num_batches):
+            start_idx = i * batch_size
+            end_idx = min((i + 1) * batch_size, num_samples)  # Защита от выхода за пределы
+            X_batch = X[start_idx:end_idx]
+            y_batch = y[start_idx:end_idx]
 
-def load_dataset(test_image_path, test_label_path, train_image_path, train_label_path):
-    train_dataset = (train_image_path, train_label_path)
-    test_dataset = (test_image_path, test_label_path)
-    # read data
-    train_image, train_label = readDataset(train_dataset)
-    test_image, test_label = readDataset(test_dataset)
-    # data preprocessing
-    train_image_normalised_pad = normalise(train_image[:, :, :, np.newaxis])
-    test_image_normalised_pad = normalise(test_image[:, :, :, np.newaxis])
-    return (train_image_normalised_pad, train_label), (test_image_normalised_pad, test_label)
+            errors, _ = model_copy.forward_propagation(X_batch, y_batch, "test")
+            total_errors += errors
 
-def train(model, train_data, test_data, epoches, learning_rate_list, batch_size):
-    # training loops
-    start_time = time.time()
-    error_rate_list = []
-    for epoch in range(0, epoches):
-        print("---------- epoch", epoch + 1, "begin ----------")
-        learning_rate = learning_rate_list[epoch]
-        # print information
-        print("learning rate: {}".format(learning_rate))
-        print("batch size: {}".format(batch_size))
-        # loop over each batch
-        start_time_epoch = time.time()
-        cost = 0
-        mini_batches = random_mini_batches(train_data[0], train_data[1], batch_size)
-        print("Training:")
-        for i in tqdm(range(len(mini_batches))):
-            batch_image, batch_label = mini_batches[i]
-            loss = model.forward_propagation(batch_image, batch_label, 'train')
-            cost += loss
-            model.back_propagation(learning_rate)
-        print("Done, total cost of epoch {}: {}".format(epoch + 1, cost))
-        print("Time used:", time.time() - start_time_epoch, "sec")
-        error_train, _ = model.forward_propagation(train_data[0], train_data[1], 'test')
-        error_test, _ = model.forward_propagation(test_data[0], test_data[1], 'test')
-        error_rate_list.append([error_train / 60000, error_test / 10000])
-        print("0/1 error(s) of training set:", error_train, "/", len(train_data[1]))
-        print("0/1 error(s) of testing set:", error_test, "/", len(test_data[1]))
-        print("---------- epoch", epoch + 1, "end ------------")
-        with open("model_data/customCNN_data_" + str(epoch + 1) + ".pkl", "wb") as output:
-            pickle.dump(model.extract_model(), output, pickle.HIGHEST_PROTOCOL)
-    error_rate_list = np.array(error_rate_list).T
-    print("Total time used:", time.time() - start_time, "sec")
-    return error_rate_list
+    # Возвращаем среднюю ошибку (процент)
+    return total_errors / num_samples
 
-def test(model_path, test_data):
-    # read model
-    with open(model_path, "rb") as model_file:
-        model = pickle.load(model_file)
-    print("Testing with {}:".format(model_path))
-    errors, predictions = model.forward_propagation(test_data[0], test_data[1], "test")
-    print("error rate:", errors / len(predictions))
+def read_dataset(paths):
+    images_path, labels_path = paths
+    with open(labels_path, "rb") as f:
+        magic, n = struct.unpack(">II", f.read(8))
+        labels = torch.tensor(np.frombuffer(f.read(), dtype=np.uint8), dtype=torch.long)
+    with open(images_path, "rb") as f:
+        magic, n, h, w = struct.unpack(">IIII", f.read(16))
+        images = torch.tensor(np.frombuffer(f.read(), dtype=np.uint8), dtype=torch.float32).view(-1, h, w)
+    return images, labels
 
-test_image_path = "dataset/MNIST/t10k-images-idx3-ubyte"
-test_label_path = "dataset/MNIST/t10k-labels-idx1-ubyte"
-train_image_path = "dataset/MNIST/train-images-idx3-ubyte"
-train_label_path = "dataset/MNIST/train-labels-idx1-ubyte"
-batch_size = 8
-epoches = 20
-learning_rate_list = np.array([5e-2] * 2 + [2e-2] * 3 + [1e-2] * 3 + [5e-3] * 4 + [1e-3] * 4 + [5e-4] * 4)
-# model_path = "model_data/customCNN_data_0.56.pkl"
 
-train_data, test_data = load_dataset(test_image_path, test_label_path, train_image_path, train_label_path)
-model = CustomCNN()
-error_rate_list = train(model, train_data, test_data, epoches, learning_rate_list, batch_size)
-# test(model_path, test_data)
-test("model_data/customCNN_data_" + str(error_rate_list[1].argmin() + 1) + ".pkl", test_data)
-x = np.arange(1, epoches + 1)
-plt.xlabel("epoches")
-plt.ylabel("error rate")
-plt.plot(x, error_rate_list[0])
-plt.plot(x, error_rate_list[1])
-plt.legend(["training data", "testing data"], loc = "upper right")
-plt.show()
+def normalize(images):
+    images = (images - images.min()) / (images.max() - images.min())
+    return (images - images.mean()) / images.std()
+
+
+def load_data():
+    train = read_dataset(("dataset/MNIST/train-images-idx3-ubyte", "dataset/MNIST/train-labels-idx1-ubyte"))
+    test = read_dataset(("dataset/MNIST/t10k-images-idx3-ubyte", "dataset/MNIST/t10k-labels-idx1-ubyte"))
+    return (normalize(train[0]).unsqueeze(3), train[1]), (normalize(test[0]).unsqueeze(3), test[1])
+
+
+def train_model(model, train_data, test_data, epochs, lrs, bs):
+    X_train, y_train = train_data
+    X_test, y_test = test_data
+    history = []
+
+    for epoch in range(epochs):
+        lr = lrs[epoch]
+        print(f"Epoch {epoch + 1}/{epochs}, lr={lr:.4f}")
+
+        permutation = torch.randperm(X_train.size(0))
+        X_train = X_train[permutation]
+        y_train = y_train[permutation]
+
+        total_loss = 0.0
+        for i in tqdm(range(0, X_train.size(0), bs)):
+            X_batch = X_train[i:i + bs]
+            y_batch = y_train[i:i + bs]
+
+            loss = model.forward_propagation(X_batch, y_batch, "train")
+            total_loss += loss
+            model.back_propagation(lr)
+
+        train_err = evaluate(model, X_train, y_train)
+        test_err = evaluate(model, X_test, y_test)
+        history.append((train_err, test_err))
+
+        print(f"Loss: {total_loss:.2f}, Train Err: {train_err}, Test Err: {test_err}")
+
+        with open(f"model_{epoch + 1}.pkl", "wb") as f:
+            pickle.dump(model.extract_model(), f)
+
+    return torch.tensor(history).T
+
+
+def test_model(model_path, test_data, batch_size=256, show_examples=True):
+    """
+    Тестирование модели из файла с визуализацией примеров
+    """
+    # Загрузка модели
+    with open(model_path, "rb") as f:
+        model = pickle.load(f)
+
+    X_test, y_test = test_data
+    total_samples = len(X_test)
+    total_errors = 0
+
+    # Прогон через модель
+    with torch.no_grad():
+        # Вычисление ошибок
+        num_batches = (total_samples + batch_size - 1) // batch_size
+        for i in tqdm(range(num_batches), desc="Testing"):
+            start = i * batch_size
+            end = min(start + batch_size, total_samples)
+
+            batch_images = X_test[start:end]
+            batch_labels = y_test[start:end]
+
+            errors, _ = model.forward_propagation(batch_images, batch_labels, "test")
+            total_errors += errors
+
+
+        # Визуализация примеров
+        if show_examples:
+            visualize_predictions(model, test_data)
+
+    # Вывод результатов
+    accuracy = (1 - total_errors / total_samples) * 100
+    print(f"\nResults for model: {model_path}")
+    print(f"Test samples: {total_samples}")
+    print(f"Errors: {total_errors}")
+    print(f"Accuracy: {accuracy:.2f}%")
+
+    return accuracy
+
+
+def visualize_predictions(model, test_data, num_examples=10):
+    """
+    Визуализация предсказаний модели
+    """
+    indices = torch.randperm(len(test_data[0]))[:num_examples]
+    images = test_data[0][indices]
+    labels = test_data[1][indices]
+
+    with torch.no_grad():
+        _, preds = model.forward_propagation(images, labels, "test")
+
+    plt.figure(figsize=(15, int(num_examples / 2) * 3))
+    for i in range(num_examples):
+        plt.subplot(int(num_examples / 5) + 1, 5, i + 1)
+        img = images[i].squeeze().numpy()
+        plt.imshow(img, cmap='gray')
+        plt.title(f"True: {labels[i]} | Pred: {preds[i]}")
+        plt.axis('off')
+    plt.tight_layout()
+    plt.show()
+
+
+def main():
+    (X_train, y_train), (X_test, y_test) = load_data()
+    model = CustomCNN()
+    test_model("model_8.pkl", (X_test,y_test))
+    epochs = 20
+    lrs = torch.cat([
+        torch.full((2,), 5e-2),
+        torch.full((3,), 2e-2),
+        torch.full((3,), 1e-2),
+        torch.full((4,), 5e-3),
+        torch.full((4,), 1e-3),
+        torch.full((4,), 5e-4),
+    ])
+
+    history = train_model(model, (X_train, y_train), (X_test, y_test), epochs, lrs, bs=8)
+
+    plt.plot(history[0], label="Train Error")
+    plt.plot(history[1], label="Test Error")
+    plt.legend()
+    plt.show()
+
+
+if __name__ == "__main__":
+    main()

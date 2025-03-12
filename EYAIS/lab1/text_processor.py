@@ -154,3 +154,5 @@ class TextProcessor:
         """Переводит время на русский"""
         tense_map = {"pres": "настоящее", "past": "прошедшее", "futr": "будущее"}
         return tense_map.get(tense, "-")
+
+

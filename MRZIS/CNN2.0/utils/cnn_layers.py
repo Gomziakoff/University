@@ -1,161 +1,191 @@
-import numpy as np
+import torch
 
-# padding for the matrix of images
+
 def zero_pad(X, pad):
-    X_pad = np.pad(X, ((0, ), (pad, ), (pad, ), (0, )), "constant", constant_values = (0, 0))
-    return X_pad
+    if pad == 0:
+        return X
+    padding = (0, 0, pad, pad, pad, pad)
+    return torch.nn.functional.pad(X, padding, mode='constant', value=0)
 
-# initialisation of the weights & bias
-def initialise(kernel_shape, sigma = 0.1, bias_factor = 0.01):
-    bias_shape = (1, 1, 1, kernel_shape[-1]) if len(kernel_shape) == 4 else (kernel_shape[-1], )
-    weight = np.random.normal(0, sigma, kernel_shape)
-    bias = np.ones(bias_shape) * bias_factor
+
+def initialise(kernel_shape, sigma=0.1, bias_factor=0.01):
+    if len(kernel_shape) == 4:
+        bias_shape = (1, 1, 1, kernel_shape[-1])
+    else:
+        bias_shape = (kernel_shape[-1],)
+    weight = torch.randn(kernel_shape) * sigma
+    bias = torch.ones(bias_shape) * bias_factor
+    weight.requires_grad_(False)
+    bias.requires_grad_(False)
     return weight, bias
 
-# softmax activation function for the output layer
-def softmax(X):
-    X_softmax = np.exp(X) / np.array([np.sum(np.exp(X), axis = 1)]).T
-    return X_softmax
 
-# Convolution Layer
-class Conv_Layer(object):
-    def __init__(self, kernel_shape, stride = 1, pad = 0, sigma = 0.1, bias_factor = 0.01):
+def softmax(X):
+    X_exp = torch.exp(X)
+    return X_exp / X_exp.sum(dim=1, keepdim=True)
+
+
+class Conv_Layer:
+    def __init__(self, kernel_shape, stride=1, pad=0, sigma=0.1, bias_factor=0.01):
         self.weight, self.bias = initialise(kernel_shape, sigma, bias_factor)
         self.stride = stride
         self.pad = pad
-    
+
     def forward_propagation(self, input_map):
         self.input_map = input_map
-        batch_size, height_input, width_input, _ = input_map.shape
-        f, _, _, channel_output = self.weight.shape
-        height_output = int((height_input + 2 * self.pad - f) / self.stride + 1)
-        width_output = int((width_input + 2 * self.pad - f) / self.stride + 1)
-        output_map = np.zeros((batch_size, height_output, width_output, channel_output))
-        input_map_pad = zero_pad(input_map, self.pad)
-        for height in range(height_output):
-            for width in range(width_output):
-                vertical_start, vertical_end = height * self.stride, height * self.stride + f
-                horizontal_start, horizontal_end = width * self.stride, width * self.stride + f
-                input_map_slice = input_map_pad[:, vertical_start: vertical_end, horizontal_start: horizontal_end, :]
-                output_map[:, height, width, :] = np.tensordot(input_map_slice, self.weight, axes = ([1, 2, 3], [0, 1, 2])) + self.bias
-        return output_map
-    
-    def back_propagation(self, d_output_map, learning_rate):
-        f, _, _, channel_output = self.weight.shape
-        _, height_output, width_output, channel_output = d_output_map.shape
-        d_input_map = np.zeros(self.input_map.shape)
-        d_weight = np.zeros(self.weight.shape)
-        d_bias = np.zeros((1, 1, 1, channel_output))
+        batch_size, h_in, w_in, _ = input_map.shape
+        f, _, _, c_out = self.weight.shape
+        h_out = (h_in + 2 * self.pad - f) // self.stride + 1
+        w_out = (w_in + 2 * self.pad - f) // self.stride + 1
+
+        output = torch.zeros((batch_size, h_out, w_out, c_out))
+        input_pad = zero_pad(input_map, self.pad)
+
+        for h in range(h_out):
+            for w in range(w_out):
+                h_start = h * self.stride
+                h_end = h_start + f
+                w_start = w * self.stride
+                w_end = w_start + f
+
+                input_slice = input_pad[:, h_start:h_end, w_start:w_end, :]
+                output[:, h, w, :] = torch.tensordot(
+                    input_slice, self.weight, dims=([1, 2, 3], [0, 1, 2])) + self.bias
+        return output
+
+    def back_propagation(self, dout, lr):
+        f = self.weight.shape[0]
+        batch, h_out, w_out, c_out = dout.shape
+        d_input = torch.zeros_like(self.input_map)
+        input_pad = zero_pad(self.input_map, self.pad)
+        d_input_pad = zero_pad(d_input, self.pad)
+        d_weight = torch.zeros_like(self.weight)
+        d_bias = torch.zeros_like(self.bias)
+
+        for h in range(h_out):
+            for w in range(w_out):
+                h_start = h * self.stride
+                h_end = h_start + f
+                w_start = w * self.stride
+                w_end = w_start + f
+
+                input_slice = input_pad[:, h_start:h_end, w_start:w_end, :]
+                dout_slice = dout[:, h, w, :]
+
+                d_input_pad[:, h_start:h_end, w_start:w_end, :] += torch.tensordot(
+                    dout_slice, self.weight, dims=([1], [3]))
+
+                d_weight += torch.tensordot(
+                    input_slice, dout_slice, dims=([0], [0]))
+
+                d_bias += dout_slice.sum(dim=0)
+
         if self.pad != 0:
-            input_map_pad = zero_pad(self.input_map, self.pad)
-            d_input_map_pad = zero_pad(d_input_map, self.pad)
+            d_input = d_input_pad[:, self.pad:-self.pad, self.pad:-self.pad, :]
         else:
-            input_map_pad = self.input_map
-            d_input_map_pad = d_input_map
-        for height in range(height_output):
-            for width in range(width_output):
-                vertical_start, vertical_end = height * self.stride, height * self.stride + f
-                horizontal_start, horizontal_end = width * self.stride, width * self.stride + f
-                input_map_slice = input_map_pad[:, vertical_start: vertical_end, horizontal_start: horizontal_end, :]
-                d_input_map_pad[:, vertical_start: vertical_end, horizontal_start: horizontal_end, :] += np.transpose(np.dot(self.weight, d_output_map[:, height, width, :].T), (3, 0, 1, 2))
-                d_weight += np.dot(np.transpose(input_map_slice, (1, 2, 3, 0)), d_output_map[:, height, width, :])
-                d_bias += np.sum(d_output_map[:, height, width, :], axis = 0)
-        d_input_map = d_input_map_pad if self.pad == 0 else d_input_map_pad[:, self.pad: -self.pad, self.pad: -self.pad, :]
-        self.weight -= learning_rate * d_weight
-        self.bias -= learning_rate * d_bias
-        self.input_map = None
-        return d_input_map
+            d_input = d_input_pad
 
-# ReLU Activation Layer
-class ReLU_Layer(object):
-    def forward_propagation(self, input_map):
-        self.input_map = input_map
-        return np.where(input_map > 0, input_map, 0)
-    
-    def back_propagation(self, d_output_map):
-        d_input_map = np.multiply(d_output_map, np.where(self.input_map > 0, 1, 0))
-        self.input_map = None
-        return d_input_map
+        self.weight -= lr * d_weight
+        self.bias -= lr * d_bias.squeeze()[None, None, None, :]
+        return d_input
 
-# Max-Pooling Layer
-class MaxPool_Layer(object):
-    def __init__(self, stride = 2, f = 2):
+
+class ReLU_Layer:
+    def forward_propagation(self, X):
+        self.input = X
+        return torch.relu(X)
+
+    def back_propagation(self, dout):
+        return dout * (self.input > 0).float()
+
+
+class MaxPool_Layer:
+    def __init__(self, stride=2, f=2):
         self.stride = stride
         self.f = f
 
-    def forward_propagation(self, input_map):
-        self.input_map = input_map
-        batch_size, height_input, width_input, channel = input_map.shape
-        height_output = int(1 + (height_input - self.f) / self.stride)
-        width_output = int(1 + (width_input - self.f) / self.stride)
-        output_map = np.zeros((batch_size, height_output, width_output, channel))
-        for height in range(height_output):
-            for width in range(width_output):
-                vertical_start, vertical_end = height * self.stride, height * self.stride + self.f
-                horizontal_start, horizontal_end = width * self.stride, width * self.stride + self.f
-                input_map_slice = input_map[:, vertical_start: vertical_end, horizontal_start: horizontal_end, :]
-                output_map[:, height, width, :] = np.max(input_map_slice, axis = (1, 2))
-        return output_map
+    def forward_propagation(self, X):
+        self.input = X
+        batch, h_in, w_in, c = X.shape
+        h_out = (h_in - self.f) // self.stride + 1
+        w_out = (w_in - self.f) // self.stride + 1
 
-    def back_propagation(self, d_output_map):
-        _, height_output, width_output, _ = d_output_map.shape
-        d_input_map = np.zeros(self.input_map.shape)
-        for height in range(height_output):
-            for width in range(width_output):
-                vertical_start, vertical_end = height * self.stride, height * self.stride + self.f
-                horizontal_start, horizontal_end = width * self.stride, width * self.stride + self.f
-                input_map_slice = self.input_map[:, vertical_start: vertical_end, horizontal_start: horizontal_end, :]
-                input_map_slice = np.transpose(input_map_slice, (1, 2, 3, 0))
-                mask = input_map_slice == input_map_slice.max((0, 1))
-                mask = np.transpose(mask, (3, 2, 0, 1))
-                d_input_map[:, vertical_start: vertical_end, horizontal_start: horizontal_end, :] += np.transpose(np.multiply(d_output_map[:, height, width, :][:, :, np.newaxis, np.newaxis], mask), (0, 2, 3, 1))
-        self.input_map = None
-        return d_input_map
+        output = torch.zeros((batch, h_out, w_out, c))
+        for h in range(h_out):
+            for w in range(w_out):
+                h_start = h * self.stride
+                h_end = h_start + self.f
+                w_start = w * self.stride
+                w_end = w_start + self.f
 
-# Fully Connected Layer
-class FC_Layer(object):
-    def __init__(self, weight_shape, sigma = 0.1, bias_factor = 0.01):
+                input_slice = X[:, h_start:h_end, w_start:w_end, :]
+                output[:, h, w, :] = torch.amax(input_slice, dim=(1, 2))
+        return output
+
+    def back_propagation(self, dout):
+        batch, h_out, w_out, c = dout.shape
+        d_input = torch.zeros_like(self.input)
+
+        for h in range(h_out):
+            for w in range(w_out):
+                h_start = h * self.stride
+                h_end = h_start + self.f
+                w_start = w * self.stride
+                w_end = w_start + self.f
+
+                input_slice = self.input[:, h_start:h_end, w_start:w_end, :]
+                max_vals = torch.amax(input_slice, dim=(1, 2), keepdim=True)
+                mask = (input_slice == max_vals).float()
+                d_input[:, h_start:h_end, w_start:w_end, :] += (
+                        dout[:, h, w, :][:, None, None, :] * mask)
+        return d_input
+
+
+class FC_Layer:
+    def __init__(self, weight_shape, sigma=0.1, bias_factor=0.01):
         self.weight, self.bias = initialise(weight_shape, sigma, bias_factor)
 
-    def forward_propagation(self, input_array):
-        self.input_array = input_array
-        return np.matmul(input_array, self.weight) + self.bias
+    def forward_propagation(self, X):
+        self.input = X
+        return X @ self.weight + self.bias
 
-    def back_propagation(self, d_output_array, learning_rate):
-        d_input_array = np.matmul(d_output_array, self.weight.T)
-        d_weight = np.matmul(self.input_array.T, d_output_array)
-        d_bias = np.sum(d_output_array.T, axis = 1)
-        self.weight -= learning_rate * d_weight
-        self.bias -= learning_rate * d_bias
-        self.input_array = None
-        return d_input_array
+    def back_propagation(self, dout, lr):
+        d_input = dout @ self.weight.T
+        d_weight = self.input.T @ dout
+        d_bias = dout.sum(dim=0)
 
-# Fully Connected Output Layer
-class FC_Output_Layer(object):
-    def __init__(self, weight_shape, sigma = 0.1, bias_factor = 0.01):
+        self.weight -= lr * d_weight
+        self.bias -= lr * d_bias
+        return d_input
+
+
+class FC_Output_Layer:
+    def __init__(self, weight_shape, sigma=0.1, bias_factor=0.01):
         self.weight, self.bias = initialise(weight_shape, sigma, bias_factor)
-    
-    def forward_propagation(self, input_array, labels, mode):
-        self.input_array = input_array
+
+    def forward_propagation(self, X, labels, mode):
+        self.input = X
         self.labels = labels
-        self.output_array = np.matmul(input_array, self.weight) + self.bias
-        output = softmax(self.output_array)
-        predictions = np.argmax(output, axis = 1)
+        logits = X @ self.weight + self.bias
+        probs = softmax(logits)
+
         if mode == "train":
-            cost_value = -np.log(output[range(output.shape[0]), labels])
-            return np.sum(cost_value)
+            loss = -torch.log(probs[torch.arange(X.shape[0]), labels]).sum()
+            return loss.item()
         elif mode == "test":
-            error = np.sum(labels != predictions)
-            return error, predictions
-    
-    def back_propagation(self, learning_rate):
-        d_output_array = softmax(self.output_array)
-        d_output_array[range(d_output_array.shape[0]), self.labels] -= 1
-        d_output_array = d_output_array / d_output_array.shape[0]
-        d_input_array = np.matmul(d_output_array, self.weight.T)
-        d_weight = np.matmul(self.input_array.T, d_output_array)
-        d_bias = np.sum(d_output_array.T, axis = 1)
-        self.weight -= learning_rate * d_weight
-        self.bias -= learning_rate * d_bias
-        self.input_array, self.labels, self.output_array = None, None, None
-        return d_input_array
+            preds = torch.argmax(probs, dim=1)
+            errors = (labels != preds).sum().item()
+            return errors, preds
+
+    def back_propagation(self, lr):
+        probs = softmax(self.input @ self.weight + self.bias)
+        probs[torch.arange(probs.shape[0]), self.labels] -= 1
+        dout = probs / probs.shape[0]
+
+        d_input = dout @ self.weight.T
+        d_weight = self.input.T @ dout
+        d_bias = dout.sum(dim=0)
+
+        self.weight -= lr * d_weight
+        self.bias -= lr * d_bias
+        return d_input
