@@ -51,8 +51,6 @@ class ManualRNN:
         dW_ih = torch.zeros_like(self.W_ih)
         dW_hh = torch.zeros_like(self.W_hh)
         db_h = torch.zeros_like(self.b_h)
-        dW_ho = torch.zeros_like(self.W_ho)
-        db_o = torch.zeros_like(self.b_o)
 
         h_last = self.cache['hidden_states'][-1]
         dW_ho = h_last.T @ dL_dy / batch_size
