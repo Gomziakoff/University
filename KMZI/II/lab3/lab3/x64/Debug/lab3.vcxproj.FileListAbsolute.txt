@@ -1,2 +1,0 @@
-D:\progr\github\University\KMZI\II\lab3\x64\Debug\libcrypto-3-x64.dll
-D:\progr\github\University\KMZI\II\lab3\lab3\x64\Debug\lab3.vcxproj.Up2Date

@@ -1,7 +1,0 @@
-﻿  lab4.cpp
-D:\progr\github\University\KMZI\II\lab4\lab4.cpp(321,9): warning C4804: <=: небезопасное использование типа "bool" в операции
-D:\progr\github\University\KMZI\II\lab4\lab4.cpp(321,35): warning C4804: <=: небезопасное использование типа "bool" в операции
-D:\progr\github\University\KMZI\II\lab4\lab4.cpp(340,11): warning C4305: return: усечение из "int" в "bool"
-  lab4.vcxproj -> D:\progr\github\University\KMZI\II\lab4\x64\Debug\lab4.exe
-  'pwsh.exe' is not recognized as an internal or external command,
-  operable program or batch file.
