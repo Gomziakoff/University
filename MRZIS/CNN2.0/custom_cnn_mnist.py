@@ -77,7 +77,7 @@ def train_model(model, train_data, test_data, epochs, lrs, bs):
 
         print(f"Loss: {total_loss:.2f}, Train Err: {train_err}, Test Err: {test_err}")
 
-        with open(f"model_{epoch + 1}.pkl", "wb") as f:
+        with open(f"model_data_cnn/model_{epoch + 1}.pkl", "wb") as f:
             pickle.dump(model.extract_model(), f)
 
     return torch.tensor(history).T
