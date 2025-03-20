@@ -1,3 +1,0 @@
-﻿  lehlab9.cpp
-D:\Progr\GitHub\University\MOIS\lab9\lehlab9\lehlab9\lehlab9.cpp(8,8): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-  lehlab9.vcxproj -> D:\Progr\GitHub\University\MOIS\lab9\lehlab9\x64\Debug\lehlab9.exe

@@ -1,3 +1,0 @@
-﻿  lab4.cpp
-D:\progr\github\University\MOIS\lab4\zad1\lab4.cpp(48,22): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-  lab4.vcxproj -> D:\progr\github\University\MOIS\lab4\zad1\x64\Debug\lab4.exe

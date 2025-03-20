@@ -1,4 +1,0 @@
-﻿D:\visual studio\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (lab1.vcxproj).  Это может привести к ошибкам очистки и перестроения.
-  zad2.cpp
-D:\progr\github\University\MOIS\lab1\Graph.h(121,31): warning C4267: +=: преобразование из "size_t" в "int"; возможна потеря данных
-  lab1.vcxproj -> D:\progr\github\University\MOIS\lab1\x64\Debug\zad2.exe

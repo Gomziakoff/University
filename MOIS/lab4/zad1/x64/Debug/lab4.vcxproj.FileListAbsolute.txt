@@ -1,2 +1,0 @@
-D:\progr\github\University\MOIS\lab4\x64\Debug\lab4.exe
-D:\progr\github\University\MOIS\lab4\zad1\x64\Debug\lab4.exe
