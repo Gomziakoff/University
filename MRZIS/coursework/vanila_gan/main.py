@@ -51,7 +51,7 @@ if __name__ == '__main__':
     # Model arguments
     parser.add_argument('--model_path', type=str, default='./model', help='path to store trained model')
     parser.add_argument("--load_model", type=bool, default=False, help="load saved model")
-
+    parser.add_argument("--experiment_name", type=str, default="vanilla_gan_test", help="load saved model")
     # Image generation arguments
     parser.add_argument('--output_path', type=str, default='./outputs', help='path to store generated images')
 
