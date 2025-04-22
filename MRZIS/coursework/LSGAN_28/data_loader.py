@@ -23,6 +23,9 @@ def get_loader(args):
         train = datasets.FashionMNIST(os.path.join(args.data_path, args.dataset), train=True, download=True, transform=train_transforms)
     elif args.dataset == 'usps':
         train = datasets.USPS(os.path.join(args.data_path, args.dataset), train=True, download=True, transform=train_transforms)
+    elif args.dataset == 'anime':
+        print(args.data_path)
+        train = datasets.ImageFolder(args.data_path, transform=train_transforms)
     else:
         print("Unknown dataset")
         exit(0)

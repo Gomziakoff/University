@@ -29,9 +29,7 @@ def get_loader(args):
         train = datasets.CIFAR10(args.data_path, train=True, download=True, transform=train_transforms)
     elif args.dataset == 'anime':
         print(args.data_path)
-        train = datasets.ImageFolder(args.data_path, transform=transforms.Compose([
-            transforms.Resize((64,64)),
-            transforms.ToTensor()]))
+        train = datasets.ImageFolder(args.data_path, transform=train_transforms)
     else:
         print("Unknown dataset")
         exit(0)

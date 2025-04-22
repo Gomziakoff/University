@@ -6,12 +6,19 @@ from data_loader import get_loader
 import torchvision.utils as vutils
 from model import Generator, Discriminator
 from tqdm import tqdm
+import mlflow
+import matplotlib.pyplot as plt
 
 
 class Solver(object):
 	def __init__(self, args):
 		self.args = args
-
+				# Initialize MLflow
+		mlflow.set_experiment(self.args.experiment_name)
+		mlflow.start_run()
+		mlflow.log_params(vars(self.args))
+		mlflow.set_tag("model_type", "GAN")
+  
 		# Get data loaders
 		self.train_loader = get_loader(args)
 
@@ -63,13 +70,28 @@ class Solver(object):
 		g_opt = optim.Adam(self.gen.parameters(), lr=self.args.lr, betas=(0.5, 0.999), weight_decay=2e-5)
 		d_opt = optim.Adam(self.dis.parameters(), lr=self.args.lr, betas=(0.5, 0.999), weight_decay=2e-5)
 
+
+		# Log optimizers
+		mlflow.log_dict({
+			"generator_optimizer": str(g_opt),
+			"discriminator_optimizer": str(d_opt)
+		}, "optimizers.json")
+
+
 		self.generate_images(name=f'sample_0.png')                       # Untrained model's generated image.
+		mlflow.log_artifact(os.path.join(self.args.output_path, 'sample_0.png'), "progress_samples")
+
+  
 		epoch_bar = tqdm(
 			total=self.args.epochs,
 			desc='[Epoch Progress]',
 			position=0,
 			bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'
 		)
+  
+  # Loss tracking
+		g_losses = []
+		d_losses = []
 
 
 		# Training loop
@@ -133,7 +155,17 @@ class Solver(object):
 
 			# Close iteration bar
 			iter_bar.close()
-   
+			
+			avg_d_loss = total_d_loss / iters_per_epoch
+			avg_g_loss = total_g_loss / iters_per_epoch
+			mlflow.log_metrics({
+				"discriminator_loss": avg_d_loss,
+				"generator_loss": avg_g_loss
+			}, step=epoch)
+   # Store for loss curve
+			d_losses.append(avg_d_loss)
+			g_losses.append(avg_g_loss)
+
 			# Update epoch bar
 			epoch_bar.set_postfix({
 				'Avg D Loss': f'{total_d_loss/iters_per_epoch:.3f}',
@@ -147,3 +179,32 @@ class Solver(object):
 			# Save model
 			torch.save(self.gen.state_dict(), os.path.join(self.args.model_path, "gen.pt"))
 			torch.save(self.dis.state_dict(), os.path.join(self.args.model_path, "dis.pt"))
+
+# Log artifacts
+			mlflow.log_artifact(os.path.join(self.args.output_path, f'sample_{epoch+1}.png'), "progress_samples")
+			mlflow.log_artifacts(self.args.model_path, "models")
+   
+		epoch_bar.close()
+		# Final logging
+		self.generate_images(name='final.png')
+		mlflow.log_artifact(os.path.join(self.args.output_path, 'final.png'), "final_results")
+		
+		# Log loss curve
+		plt.figure(figsize=(10, 5))
+		plt.plot(g_losses, label="Generator Loss")
+		plt.plot(d_losses, label="Discriminator Loss")
+		plt.title("Training Loss History")
+		plt.xlabel("Epoch")
+		plt.ylabel("Loss")
+		plt.legend()
+		plt.savefig(os.path.join(self.args.output_path, "loss_curve.png"))
+		mlflow.log_artifact(os.path.join(self.args.output_path, "loss_curve.png"), "metrics")
+
+		# Log final models
+		mlflow.pytorch.log_model(self.gen, "generator")
+		mlflow.pytorch.log_model(self.dis, "discriminator")
+		
+		mlflow.end_run()
+
+
+
