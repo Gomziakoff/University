@@ -7,6 +7,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import math
+import mlflow
+import matplotlib.pyplot as plt
+from tqdm import tqdm
 
 # Arguments
 BATCH_SIZE = 128
@@ -16,10 +19,11 @@ Z_DIM = 100
 CLAMP = 0.01
 N_CRITIC = 5
 CHANNELS = 3
+EXPERIMENT_NAME = "anime_wgan"
 
 LOAD_MODEL = False
 
-DB = 'LSUN_Bedroom'  # CelebA LSUN_Church | LSUN_Bedroom
+DB = 'anime'  # CelebA LSUN_Church | LSUN_Bedroom
 
 # Directories for storing model and output samples
 model_path = os.path.join('./model', DB)
@@ -53,6 +57,8 @@ elif DB == 'LSUN_Bedroom':
 	dataset = torch.utils.data.Subset(dataset, samples_to_use)
 elif DB == 'CelebA':
 	dataset = datasets.CelebA(db_path, split='train', download=True, transform=transform)
+elif DB == 'anime':
+        dataset = datasets.ImageFolder(db_path, transform=transform)
 else:
 	print("Incorrect dataset")
 	exit(0)
@@ -137,6 +143,11 @@ class Critic(nn.Module):
 generator = Generator(z_dim=Z_DIM, channels=CHANNELS)
 critic = Critic(channels=CHANNELS)
 
+mlflow.set_experiment(EXPERIMENT_NAME)
+mlflow.start_run()
+#mlflow.log_params(vars(self.args))
+mlflow.set_tag("model_type", "WGAN")
+
 # Load previous model   
 if LOAD_MODEL:
 	generator.load_state_dict(torch.load(os.path.join(model_path, 'generator.pkl')))
@@ -152,6 +163,12 @@ print(critic)
 g_opt = optim.RMSprop(generator.parameters(), lr=0.00005, weight_decay=2e-5)
 c_opt = optim.RMSprop(critic.parameters(), lr=0.00005, weight_decay=2e-5)
 
+# Log optimizers
+mlflow.log_dict({
+	"generator_optimizer": str(g_opt),
+	"discriminator_optimizer": str(c_opt)
+}, "optimizers.json")
+
 # GPU Compatibility
 is_cuda = torch.cuda.is_available()
 if is_cuda:
@@ -163,10 +180,32 @@ total_iters = 0
 g_loss = d_loss = torch.Tensor([0])
 max_iter = len(data_loader)
 
+epoch_bar = tqdm(
+			total=EPOCHS,
+			desc='[Epoch Progress]',
+			position=0,
+			bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'
+		)
+# Loss tracking
+g_losses = []
+d_losses = []
+iters_per_epoch = len(data_loader)
+
 # Training
 for epoch in range(EPOCHS):
 	generator.train()
 	critic.train()
+ 
+	total_d_loss = 0.0
+	total_g_loss = 0.0
+ 
+	iter_bar = tqdm(
+				total=iters_per_epoch,
+				desc=f'[Epoch {epoch+1}/{EPOCHS}]',
+				position=1,
+				leave=False,
+				bar_format='{l_bar}{bar:20}{r_bar}{bar:-20b}'
+			)
 
 	for i, data in enumerate(data_loader):
 
@@ -211,17 +250,67 @@ for epoch in range(EPOCHS):
 			g_loss.backward()
 			g_opt.step()
 
-		if i % 50 == 0:
-			print("Epoch: " + str(epoch + 1) + "/" + str(EPOCHS)
-				  + "\titer: " + str(i) + "/" + str(max_iter)
-				  + "\ttotal_iters: " + str(total_iters)
-				  + "\td_loss:" + str(round(d_loss.item(), 4))
-				  + "\tg_loss:" + str(round(g_loss.item(), 4))
-				  )
+		# Update iteration bar
+		loss_dict = {
+			'D_loss': f'{d_loss.item():.3f}',
+			'G_loss': f'{g_loss.item():.3f}'
+		}
+		iter_bar.set_postfix(loss_dict)
+		iter_bar.update(1)
 
+		# Accumulate losses
+		total_d_loss += d_loss.item()
+		total_g_loss += g_loss.item()
+		
+	iter_bar.close()
+ 
+	# Calculate and log epoch metrics
+	avg_d_loss = total_d_loss / iters_per_epoch
+	avg_g_loss = total_g_loss / iters_per_epoch
+	mlflow.log_metrics({
+		"discriminator_loss": avg_d_loss,
+		"generator_loss": avg_g_loss
+	}, step=epoch)
+
+	# Store for loss curve
+	d_losses.append(avg_d_loss)
+	g_losses.append(avg_g_loss)
+
+	# Update epoch bar
+	epoch_bar.set_postfix({
+		'Avg D Loss': f'{total_d_loss/iters_per_epoch:.3f}',
+		'Avg G Loss': f'{total_g_loss/iters_per_epoch:.3f}'
+	})
+	epoch_bar.update(1)
+ 
 	torch.save(generator.state_dict(), os.path.join(model_path, 'generator.pkl'))
 	torch.save(critic.state_dict(), os.path.join(model_path, 'critic.pkl'))
 
 	generate_imgs(fixed_z, epoch=epoch + 1)
+ 
+	# Log artifacts
+	mlflow.log_artifact(os.path.join(samples_path, 'sample_' + str(epoch+ 1) + '.png'), "progress_samples")
+	mlflow.log_artifacts(model_path, "models")
+
+epoch_bar.close()
 
 generate_imgs(fixed_z)
+mlflow.log_artifact(os.path.join(samples_path, 'sample_' + str(epoch+ 1) + '.png'), "progress_samples")
+
+# Log loss curve
+plt.figure(figsize=(10, 5))
+plt.plot(g_losses, label="Generator Loss")
+plt.plot(d_losses, label="Discriminator Loss")
+plt.title("Training Loss History")
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+plt.legend()
+plt.savefig(os.path.join(samples_path, "loss_curve.png"))
+mlflow.log_artifact(os.path.join(samples_path, "loss_curve.png"), "metrics")
+
+# Log final models
+mlflow.pytorch.log_model(generator, "generator")
+mlflow.pytorch.log_model(critic, "discriminator")
+
+mlflow.end_run()
+

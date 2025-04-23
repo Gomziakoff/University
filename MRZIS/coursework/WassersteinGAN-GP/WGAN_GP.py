@@ -20,7 +20,7 @@ N_CRITIC = 5
 GRADIENT_PENALTY = 10
 LOAD_MODEL = False
 
-DB = 'LSUN_Bedroom'  # CelebA | LSUN_Church | LSUN_Bedroom
+DB = 'anime'  # CelebA | LSUN_Church | LSUN_Bedroom
 
 
 # Directories for storing model and output samples
