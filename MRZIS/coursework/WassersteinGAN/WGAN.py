@@ -14,7 +14,7 @@ from tqdm import tqdm
 # Arguments
 BATCH_SIZE = 128
 IMGS_TO_DISPLAY = 100
-EPOCHS = 500
+EPOCHS = 100
 Z_DIM = 100
 CLAMP = 0.01
 N_CRITIC = 5
