@@ -1,0 +1,7 @@
+/* Пример программы с логическими выражениями */
+if x > 5 and y < 10 then result := true;
+if name = "John" and age >= 18 then call_procedure("adult");
+if not (a = b or c <> d) then value := false;
+
+/* Ошибочный пример - слишком длинный идентификатор */
+/*if very_long_identifier_name_that_exceeds_32_chars then error;*/

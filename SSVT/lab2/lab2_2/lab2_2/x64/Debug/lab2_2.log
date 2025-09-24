@@ -1,4 +1,3 @@
 ﻿  lab2_2.cpp
-  lab2_2.vcxproj -> D:\progr\github\University\SSVT\lab2\lab2_2\x64\Debug\lab2_2.exe
-  "pwsh.exe" не является внутренней или внешней
-  командой, исполняемой программой или пакетным файлом.
+D:\progr\github\University\SSVT\lab2\lab2_2\lab2_2.cpp(29,12): warning C4003: недостаточно аргументов для вызова макроса, подобного функции, "RGB"
+D:\progr\github\University\SSVT\lab2\lab2_2\lab2_2.cpp(29,12): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "rand"

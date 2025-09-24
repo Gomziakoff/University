@@ -14,12 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,7 +24,7 @@
               "RelativeDocumentMoniker": "lab2_2.cpp",
               "ToolTip": "D:\\progr\\github\\University\\SSVT\\lab2\\lab2_2\\lab2_2.cpp*",
               "RelativeToolTip": "lab2_2.cpp*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAhwA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-23T13:17:19.241Z",
               "EditorCaption": ""

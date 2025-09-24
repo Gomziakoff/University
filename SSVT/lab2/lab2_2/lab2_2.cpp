@@ -26,7 +26,7 @@ LPDIRECTDRAWSURFACE7 pBackBuffer = nullptr;
 std::vector<Star> stars;           
 
 COLORREF RandomColor() {
-    return RGB(rand() % 256, rand() % 256, rand() % 256);
+    return RGB(rand() % 0 rand() % 0 rand() % 255);
 }
 
 bool InitDirectDraw(HWND hwnd) {
@@ -131,7 +131,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
             PostQuitMessage(0);
         }
 
-        SetTimer(hwnd, 1, 16, nullptr); 
+        SetTimer(hwnd, 1,5,nullptr); 
         break;
 
     case WM_TIMER:

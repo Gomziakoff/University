@@ -13,7 +13,7 @@ bg_r, bg_g, bg_b = 0, 0, 0
 color_change_speed = 1
 
 sprite_sheet_main = pygame.image.load('spritesheet.png')
-sprite_sheet_bird = pygame.image.load('robin.png')
+
 
 def load_frames(sheet, rows, cols, scale=2):
     frame_width = sheet.get_width() // cols
@@ -31,10 +31,7 @@ def load_frames(sheet, rows, cols, scale=2):
     return frames, int(frame_width * scale), int(frame_height * scale)
 
 frames_main, main_width, main_height = load_frames(sprite_sheet_main, 6, 5)
-frames_bird, bird_width, bird_height = load_frames(sprite_sheet_bird, 5, 5, 0.5)  # Предположим 4 строки и 5 столбцов
-frames_bird.pop()
-frames_bird.pop()
-frames_bird.pop()
+
 
 class FlyingObject:
     def __init__(self, frames, width, height):
@@ -74,7 +71,6 @@ class FlyingObject:
         screen.blit(frame, (self.x, self.y))
 
 main_objects = [FlyingObject(frames_main, main_width, main_height) for _ in range(5)]  # Основной объект
-birds = [FlyingObject(frames_bird, bird_width, bird_height) for _ in range(5)]  # 5 птиц
 
 num_stars = 500
 stars = [(random.randint(0, screen_width), random.randint(0, screen_height),
@@ -103,10 +99,6 @@ while running:
     for cube in main_objects:
         cube.update()
         cube.draw(screen)
-
-    for bird in birds:
-        bird.update()
-        bird.draw(screen)
 
     pygame.display.flip()
     clock.tick(30)
