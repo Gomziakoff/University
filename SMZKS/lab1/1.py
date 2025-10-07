@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 
 qc = QuantumCircuit(5, 2)
 
-qc.x(0)
-qc.x(2)
+
 
 qc.cx(0, 3)  # S = A
 qc.cx(1, 3)  # S = A ⊕ B

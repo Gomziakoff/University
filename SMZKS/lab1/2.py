@@ -34,16 +34,17 @@ def build_circuit(a, b, c, d, e):
     qc.ccx(6,7,8)
 
     qc.measure(8,0)
+    qc.draw(output='mpl')
+    plt.show()
     return qc
 
 # Симуляция схемы
 def simulate(qc):
     backend = Aer.get_backend("aer_simulator")
     tqc = transpile(qc, backend)
-    job = backend.run(tqc, shots=1)  # один прогон, результат детерминированный
+    job = backend.run(tqc, shots=1)
     result = job.result()
     counts = result.get_counts()
-    # вернёт "0" или "1" строкой
     return int(max(counts, key=counts.get))
 
 # Проверка всех входов

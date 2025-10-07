@@ -7,8 +7,8 @@ from transformers import T5ForConditionalGeneration, T5Tokenizer
 from docx import Document
 import threading
 
-nltk.download('punkt', quiet=True)
-nltk.download('stopwords', quiet=True)
+nltk.download('punkt')
+nltk.download('stopwords')
 nltk.download("punkt_tab")
 from nltk.corpus import stopwords
 from nltk.tokenize import sent_tokenize, word_tokenize
@@ -50,7 +50,7 @@ def generate_summary(sentences, sentence_weights, summary_length=10):
 
 
 def generate_ml_summary(text):
-    model_name = "t5-base"  # Вы можете использовать "t5-small" или "t5-large" в зависимости от ваших ресурсов
+    model_name = "t5-base"
     try:
         model = T5ForConditionalGeneration.from_pretrained(model_name)
         tokenizer = T5Tokenizer.from_pretrained(model_name)
@@ -104,7 +104,8 @@ def summarize():
 
 
 root = tk.Tk()
-root.title("Увольняем-сокращаем")
+root.title("2")
+
 selected_file = tk.StringVar()
 method = tk.StringVar(value="TF-IDF")
 file_button = tk.Button(root, text="Выбрать файл .docx", command=open_file)

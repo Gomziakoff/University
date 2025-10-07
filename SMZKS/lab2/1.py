@@ -1,10 +1,7 @@
 import matplotlib.pyplot as plt
-import numpy as np
 
 from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
 from qiskit_aer import Aer
-
-from qiskit.visualization import plot_histogram
 
 backend = Aer.get_backend('qasm_simulator')
 shots = 2000
@@ -55,7 +52,6 @@ for x in range(15):
 
     prob = counts.get(target, 0) / shots
     prob_of_ans.append(prob)
-
 print(prob_of_ans)
 
 iteration = [i for i in range(15)]

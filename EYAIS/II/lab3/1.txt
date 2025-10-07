@@ -1,0 +1,5 @@
+"COVID-19 Mechanisms in the Human Body—What We Know So Far"
+
+In this review, we precisely discuss the current evidence for the pathogenic mechanisms of COVID-19 in humans, including virus–host interactions, pulmonary and extrapulmonary manifestations, and the long-term sequelae. The SARS-CoV-2 virus primarily enters human cells via the ACE2 receptor, leading to a cascade of immune responses. While many individuals experience mild symptoms or remain asymptomatic, others develop severe respiratory distress, often progressing to acute respiratory distress syndrome (ARDS). Extrapulmonary manifestations include cardiovascular, renal, and neurological complications. Furthermore, a subset of patients experience prolonged symptoms, commonly referred to as "long COVID," which can persist for weeks to months after the acute infection has resolved.
+
+Understanding these mechanisms is crucial for developing targeted therapies and interventions to mitigate the impact of COVID-19 on public health.

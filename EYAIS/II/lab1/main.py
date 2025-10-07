@@ -44,17 +44,16 @@ def index_files(directory):
                 index[path] = text
                 texts.append(text)
 
-    # Векторизация текстов
     vectorizer = TfidfVectorizer()
     tfidf_matrix = vectorizer.fit_transform(texts)
     return index, tfidf_matrix, vectorizer
 
 def search_index(index, tfidf_matrix, vectorizer, query):
-    query_words = query.split()  # Разделяем запрос на слова
+    query_words = query.split()
     results = {}
     for word in query_words:
         query_vector = vectorizer.transform([word])
-        cosine_similarities = np.dot(tfidf_matrix, query_vector.T).toarray()  # косинусное сходство
+        cosine_similarities = np.dot(tfidf_matrix, query_vector.T).toarray()
         for i, path in enumerate(index.keys()):
             if cosine_similarities[i][0] > 0:
                 if path not in results:
@@ -98,7 +97,6 @@ def search_files():
                         matched_text = text[start_context:end_context].replace(word, f"[{word}]")
                         matched_texts.append(matched_text)
                         start_index = text.lower().find(word.lower(), start_index + 1)
-            # Выводим результаты для файла, если есть совпадения
             if matched_texts:
                 result_text.insert(tk.END, f"Найдено в: {path} (Совпадений: {data['count']})\nТексты:\n")
                 for i, matched_text in enumerate(matched_texts):
