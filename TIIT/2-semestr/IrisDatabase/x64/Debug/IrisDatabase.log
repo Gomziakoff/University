@@ -1,4 +1,0 @@
-﻿  IrisDatabase.cpp
-D:\progr\github\University\TIIT\2-semestr\IrisDatabase\IrisDatabase.cpp(21,25): warning C4244: +=: преобразование "float" в "int", возможна потеря данных
-D:\progr\github\University\TIIT\2-semestr\IrisDatabase\IrisDatabase.cpp(22,16): warning C4244: return: преобразование "double" в "float", возможна потеря данных
-  IrisDatabase.vcxproj -> D:\progr\github\University\TIIT\2-semestr\IrisDatabase\x64\Debug\IrisDatabase.exe

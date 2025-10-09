@@ -1,3 +1,0 @@
-﻿  lab2_2.cpp
-D:\progr\github\University\SSVT\lab2\lab2_2\lab2_2.cpp(29,12): warning C4003: недостаточно аргументов для вызова макроса, подобного функции, "RGB"
-D:\progr\github\University\SSVT\lab2\lab2_2\lab2_2.cpp(29,12): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "rand"

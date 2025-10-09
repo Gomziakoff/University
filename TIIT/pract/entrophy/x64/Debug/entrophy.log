@@ -1,3 +1,0 @@
-﻿  entrophy.cpp
-D:\progr\github\University\TIIT\pract\entrophy\entrophy.cpp(16,25): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-  entrophy.vcxproj -> D:\progr\github\University\TIIT\pract\entrophy\x64\Debug\entrophy.exe
