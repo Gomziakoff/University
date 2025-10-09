@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/progr/github/University/MRZIS/lab8/mlruns/0/9c47598353744dc5991baa989a0af7e2/artifacts
+end_time: 1732348744261
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 9c47598353744dc5991baa989a0af7e2
+run_name: skittish-colt-590
+run_uuid: 9c47598353744dc5991baa989a0af7e2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732348625222
+status: 3
+tags: []
+user_id: lesha

@@ -1,0 +1,1 @@
+type inp.asm | app.exe

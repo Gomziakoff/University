@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/progr/github/University/MRZIS/lab8/mlruns/0/b54d945887d240df994663975e48974f/artifacts
+end_time: 1732312134121
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b54d945887d240df994663975e48974f
+run_name: blushing-owl-164
+run_uuid: b54d945887d240df994663975e48974f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732312049637
+status: 3
+tags: []
+user_id: lesha

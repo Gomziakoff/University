@@ -1,0 +1,4 @@
+// это комментарий
+if x = true then y := false;
+a < b and not c;
+proc1();

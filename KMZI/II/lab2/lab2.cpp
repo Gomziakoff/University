@@ -115,14 +115,44 @@ void ripemd256(const uint8_t* input, size_t length, uint8_t* output) {
 	}
 	memcpy(output, h, 32);
 }
+
+int countDifferentBits(const uint8_t* hash1, const uint8_t* hash2, size_t size) {
+	int diffBits = 0;
+	for (size_t i = 0; i < size; ++i) {
+		uint8_t diff = hash1[i] ^ hash2[i];
+		for (int bit = 0; bit < 8; ++bit) {
+			if (diff & (1 << bit)) {
+				++diffBits;
+			}
+		}
+	}
+	return diffBits;
+}
+
 int main() {
 	string input = "Hello world";
-	uint8_t hash[32];
-	ripemd256(reinterpret_cast<const uint8_t*>(input.c_str()), input.size(), hash);
+	uint8_t originalHash[32], modifiedHash[32];
+	ripemd256(reinterpret_cast<const uint8_t*>(input.c_str()), input.size(), originalHash);
 	cout << "RIPEMD-256 hash: ";
-	for (size_t i = 0; i < sizeof(hash); ++i) {
-		cout << hex << setw(2) << setfill('0') << static_cast<int>(hash[i]);
+	for (size_t i = 0; i < sizeof(originalHash); ++i) {
+		cout << hex << setw(2) << setfill('0') << static_cast<int>(originalHash[i]);
 	}
+
+	for (int bitsToInvert = 0; bitsToInvert <= 10; ++bitsToInvert) {
+		string modifiedInput = input;
+
+		for (int bit = 0; bit < bitsToInvert; ++bit) {
+			modifiedInput[0] ^= (1 << bit);  
+		}
+
+		// Хэш для измененного сообщения
+		ripemd256(reinterpret_cast<const uint8_t*>(modifiedInput.c_str()), modifiedInput.size(), modifiedHash);
+
+		// Подсчет количества изменившихся битов
+		int diffBits = countDifferentBits(originalHash, modifiedHash, 32);
+		cout << dec << "Bits inverted: " << bitsToInvert << ", Differing bits: " << diffBits << endl;
+	}
+
 	cout << endl;
 	return 0;
 }

@@ -1,0 +1,10 @@
+D:\progr\github\University\OMIS\lab1\19\bin\Debug\19.exe.config
+D:\progr\github\University\OMIS\lab1\19\bin\Debug\19.exe
+D:\progr\github\University\OMIS\lab1\19\bin\Debug\19.pdb
+D:\progr\github\University\OMIS\lab1\19\obj\Debug\19.csproj.AssemblyReference.cache
+D:\progr\github\University\OMIS\lab1\19\obj\Debug\_19.Form1.resources
+D:\progr\github\University\OMIS\lab1\19\obj\Debug\_19.Properties.Resources.resources
+D:\progr\github\University\OMIS\lab1\19\obj\Debug\19.csproj.GenerateResource.cache
+D:\progr\github\University\OMIS\lab1\19\obj\Debug\19.csproj.CoreCompileInputs.cache
+D:\progr\github\University\OMIS\lab1\19\obj\Debug\19.exe
+D:\progr\github\University\OMIS\lab1\19\obj\Debug\19.pdb

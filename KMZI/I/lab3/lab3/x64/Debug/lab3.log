@@ -1,7 +1,0 @@
-﻿  lab3.cpp
-D:\Progr\GitHub\University\KMZI\lab3\lab3.cpp(37,39): warning C4244: аргумент: преобразование "double" в "_Ty", возможна потеря данных
-D:\Progr\GitHub\University\KMZI\lab3\lab3.cpp(37,39): warning C4244:         with
-D:\Progr\GitHub\University\KMZI\lab3\lab3.cpp(37,39): warning C4244:         [
-D:\Progr\GitHub\University\KMZI\lab3\lab3.cpp(37,39): warning C4244:             _Ty=int
-D:\Progr\GitHub\University\KMZI\lab3\lab3.cpp(37,39): warning C4244:         ]
-  lab3.vcxproj -> D:\Progr\GitHub\University\KMZI\lab3\x64\Debug\lab3.exe

@@ -1,0 +1,975 @@
+[
+    {
+        "word": "автор",
+        "lemma": "автор",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "именительный",
+            "tense": "-",
+            "role": "Подлежащее"
+        },
+        "morphological_characteristics": {
+            "stem": "авто",
+            "ending": "р"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "увы, потому что бедный автор\nпохитил его у мольера."
+        ]
+    },
+    {
+        "word": "бедный",
+        "lemma": "бедный",
+        "part_of_speech": "имя прилагательное (полное)",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "именительный",
+            "tense": "-",
+            "role": "Определение"
+        },
+        "morphological_characteristics": {
+            "stem": "бедн",
+            "ending": "ый"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "увы, потому что бедный автор\nпохитил его у мольера."
+        ]
+    },
+    {
+        "word": "бой",
+        "lemma": "бой",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "именительный",
+            "tense": "-",
+            "role": "Подлежащее"
+        },
+        "morphological_characteristics": {
+            "stem": "бой",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "была",
+        "lemma": "быть",
+        "part_of_speech": "глагол (личная форма)",
+        "grammatical_categories": {
+            "gender": "женский",
+            "number": "единственное",
+            "case": "-",
+            "tense": "прошедшее",
+            "role": "Сказуемое (прошедшее время)"
+        },
+        "morphological_characteristics": {
+            "stem": "быть",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "в",
+        "lemma": "в",
+        "part_of_speech": "предлог",
+        "grammatical_categories": {
+            "gender": "неизвестно",
+            "number": "-",
+            "case": "-",
+            "tense": "-",
+            "role": "Предлог"
+        },
+        "morphological_characteristics": {
+            "stem": "в",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "\nскажите мне, почему «похититель»\nосвистан партером?",
+            "увы, потому что бедный автор\nпохитил его у мольера.",
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "воин",
+        "lemma": "воин",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "именительный",
+            "tense": "-",
+            "role": "Подлежащее"
+        },
+        "morphological_characteristics": {
+            "stem": "воин",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "где",
+        "lemma": "где",
+        "part_of_speech": "наречие",
+        "grammatical_categories": {
+            "gender": "неизвестно",
+            "number": "-",
+            "case": "-",
+            "tense": "-",
+            "role": "Обстоятельство"
+        },
+        "morphological_characteristics": {
+            "stem": "где",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "где",
+        "lemma": "где",
+        "part_of_speech": "наречие",
+        "grammatical_categories": {
+            "gender": "неизвестно",
+            "number": "-",
+            "case": "-",
+            "tense": "-",
+            "role": "Обстоятельство"
+        },
+        "morphological_characteristics": {
+            "stem": "где",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "2/42",
+            "lemma_frequency": "2/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "его",
+        "lemma": "он",
+        "part_of_speech": "местоимение-существительное",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "винительный",
+            "tense": "-",
+            "role": "Дополнение (местоимение)"
+        },
+        "morphological_characteristics": {
+            "stem": "он",
+            "ending": "о"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "увы, потому что бедный автор\nпохитил его у мольера."
+        ]
+    },
+    {
+        "word": "и",
+        "lemma": "и",
+        "part_of_speech": "союз",
+        "grammatical_categories": {
+            "gender": "неизвестно",
+            "number": "-",
+            "case": "-",
+            "tense": "-",
+            "role": "Союз"
+        },
+        "morphological_characteristics": {
+            "stem": "и",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "\nскажите мне, почему «похититель»\nосвистан партером?",
+            "увы, потому что бедный автор\nпохитил его у мольера.",
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "которой",
+        "lemma": "который",
+        "part_of_speech": "имя прилагательное (полное)",
+        "grammatical_categories": {
+            "gender": "женский",
+            "number": "единственное",
+            "case": "родительный",
+            "tense": "-",
+            "role": "Определение"
+        },
+        "morphological_characteristics": {
+            "stem": "кото",
+            "ending": "рой"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "2/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "котором",
+        "lemma": "который",
+        "part_of_speech": "имя прилагательное (полное)",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "предложный",
+            "tense": "-",
+            "role": "Определение"
+        },
+        "morphological_characteristics": {
+            "stem": "кото",
+            "ending": "ром"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "матюрена",
+        "lemma": "матюрен",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "родительный",
+            "tense": "-",
+            "role": "Дополнение"
+        },
+        "morphological_characteristics": {
+            "stem": "матю",
+            "ending": "рена"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "мне",
+        "lemma": "я",
+        "part_of_speech": "местоимение-существительное",
+        "grammatical_categories": {
+            "gender": "неизвестно",
+            "number": "единственное",
+            "case": "дательный",
+            "tense": "-",
+            "role": "Дополнение (местоимение)"
+        },
+        "morphological_characteristics": {
+            "stem": "я",
+            "ending": "не"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "\nскажите мне, почему «похититель»\nосвистан партером?"
+        ]
+    },
+    {
+        "word": "мольера",
+        "lemma": "мольер",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "родительный",
+            "tense": "-",
+            "role": "Дополнение"
+        },
+        "morphological_characteristics": {
+            "stem": "моль",
+            "ending": "ера"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "увы, потому что бедный автор\nпохитил его у мольера."
+        ]
+    },
+    {
+        "word": "не",
+        "lemma": "не",
+        "part_of_speech": "частица",
+        "grammatical_categories": {
+            "gender": "неизвестно",
+            "number": "-",
+            "case": "-",
+            "tense": "-",
+            "role": "Частица"
+        },
+        "morphological_characteristics": {
+            "stem": "не",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "\nскажите мне, почему «похититель»\nосвистан партером?",
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "николая",
+        "lemma": "николай",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "родительный",
+            "tense": "-",
+            "role": "Дополнение"
+        },
+        "morphological_characteristics": {
+            "stem": "нико",
+            "ending": "лая"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "нитуш",
+        "lemma": "нитуша",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "женский",
+            "number": "множественное",
+            "case": "родительный",
+            "tense": "-",
+            "role": "Дополнение"
+        },
+        "morphological_characteristics": {
+            "stem": "ниту",
+            "ending": "ш"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "один",
+        "lemma": "один",
+        "part_of_speech": "имя прилагательное (полное)",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "именительный",
+            "tense": "-",
+            "role": "Определение"
+        },
+        "morphological_characteristics": {
+            "stem": "один",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "одолел",
+        "lemma": "одолеть",
+        "part_of_speech": "глагол (личная форма)",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "-",
+            "tense": "прошедшее",
+            "role": "Сказуемое (прошедшее время)"
+        },
+        "morphological_characteristics": {
+            "stem": "одол",
+            "ending": "ел"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "освистан",
+        "lemma": "освистать",
+        "part_of_speech": "причастие (краткое)",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "-",
+            "tense": "прошедшее",
+            "role": "Именная часть составного сказуемого"
+        },
+        "morphological_characteristics": {
+            "stem": "осви",
+            "ending": "стан"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "\nскажите мне, почему «похититель»\nосвистан партером?"
+        ]
+    },
+    {
+        "word": "отличился",
+        "lemma": "отличиться",
+        "part_of_speech": "глагол (личная форма)",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "-",
+            "tense": "прошедшее",
+            "role": "Сказуемое (прошедшее время)"
+        },
+        "morphological_characteristics": {
+            "stem": "отли",
+            "ending": "чился"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "партером",
+        "lemma": "партер",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "творительный",
+            "tense": "-",
+            "role": "Дополнение"
+        },
+        "morphological_characteristics": {
+            "stem": "парт",
+            "ending": "ером"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "\nскажите мне, почему «похититель»\nосвистан партером?"
+        ]
+    },
+    {
+        "word": "перевод",
+        "lemma": "перевод",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "именительный",
+            "tense": "-",
+            "role": "Подлежащее"
+        },
+        "morphological_characteristics": {
+            "stem": "пере",
+            "ending": "вод"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "погиб",
+        "lemma": "погибнуть",
+        "part_of_speech": "глагол (личная форма)",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "-",
+            "tense": "прошедшее",
+            "role": "Сказуемое (прошедшее время)"
+        },
+        "morphological_characteristics": {
+            "stem": "поги",
+            "ending": "б"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "поль",
+        "lemma": "поль",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "именительный",
+            "tense": "-",
+            "role": "Подлежащее"
+        },
+        "morphological_characteristics": {
+            "stem": "поль",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "потому",
+        "lemma": "потому",
+        "part_of_speech": "наречие",
+        "grammatical_categories": {
+            "gender": "неизвестно",
+            "number": "-",
+            "case": "-",
+            "tense": "-",
+            "role": "Обстоятельство"
+        },
+        "morphological_characteristics": {
+            "stem": "пото",
+            "ending": "му"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "увы, потому что бедный автор\nпохитил его у мольера."
+        ]
+    },
+    {
+        "word": "похитил",
+        "lemma": "похитить",
+        "part_of_speech": "глагол (личная форма)",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "-",
+            "tense": "прошедшее",
+            "role": "Сказуемое (прошедшее время)"
+        },
+        "morphological_characteristics": {
+            "stem": "похи",
+            "ending": "тил"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "увы, потому что бедный автор\nпохитил его у мольера."
+        ]
+    },
+    {
+        "word": "похититель",
+        "lemma": "похититель",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "именительный",
+            "tense": "-",
+            "role": "Подлежащее"
+        },
+        "morphological_characteristics": {
+            "stem": "похи",
+            "ending": "титель"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "\nскажите мне, почему «похититель»\nосвистан партером?"
+        ]
+    },
+    {
+        "word": "почему",
+        "lemma": "почему",
+        "part_of_speech": "наречие",
+        "grammatical_categories": {
+            "gender": "неизвестно",
+            "number": "-",
+            "case": "-",
+            "tense": "-",
+            "role": "Обстоятельство"
+        },
+        "morphological_characteristics": {
+            "stem": "поче",
+            "ending": "му"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "\nскажите мне, почему «похититель»\nосвистан партером?"
+        ]
+    },
+    {
+        "word": "пою",
+        "lemma": "поить",
+        "part_of_speech": "глагол (личная форма)",
+        "grammatical_categories": {
+            "gender": "неизвестно",
+            "number": "единственное",
+            "case": "-",
+            "tense": "настоящее",
+            "role": "Сказуемое"
+        },
+        "morphological_characteristics": {
+            "stem": "поит",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "прекрасную",
+        "lemma": "прекрасный",
+        "part_of_speech": "имя прилагательное (полное)",
+        "grammatical_categories": {
+            "gender": "женский",
+            "number": "единственное",
+            "case": "винительный",
+            "tense": "-",
+            "role": "Определение"
+        },
+        "morphological_characteristics": {
+            "stem": "прек",
+            "ending": "расную"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "рука",
+        "lemma": "рука",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "женский",
+            "number": "единственное",
+            "case": "именительный",
+            "tense": "-",
+            "role": "Подлежащее"
+        },
+        "morphological_characteristics": {
+            "stem": "рука",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "сей",
+        "lemma": "сей",
+        "part_of_speech": "имя прилагательное (полное)",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "винительный",
+            "tense": "-",
+            "role": "Определение"
+        },
+        "morphological_characteristics": {
+            "stem": "сей",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "скажите",
+        "lemma": "сказать",
+        "part_of_speech": "глагол (личная форма)",
+        "grammatical_categories": {
+            "gender": "неизвестно",
+            "number": "множественное",
+            "case": "-",
+            "tense": "-",
+            "role": null
+        },
+        "morphological_characteristics": {
+            "stem": "сказ",
+            "ending": "ите"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "\nскажите мне, почему «похититель»\nосвистан партером?"
+        ]
+    },
+    {
+        "word": "стычки",
+        "lemma": "стычка",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "женский",
+            "number": "множественное",
+            "case": "именительный",
+            "tense": "-",
+            "role": "Подлежащее"
+        },
+        "morphological_characteristics": {
+            "stem": "стыч",
+            "ending": "ки"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "толи",
+        "lemma": "толя",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "родительный",
+            "tense": "-",
+            "role": "Дополнение"
+        },
+        "morphological_characteristics": {
+            "stem": "толя",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "трофеем",
+        "lemma": "трофей",
+        "part_of_speech": "имя существительное",
+        "grammatical_categories": {
+            "gender": "мужской",
+            "number": "единственное",
+            "case": "творительный",
+            "tense": "-",
+            "role": "Дополнение"
+        },
+        "morphological_characteristics": {
+            "stem": "троф",
+            "ending": "еем"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "у",
+        "lemma": "у",
+        "part_of_speech": "предлог",
+        "grammatical_categories": {
+            "gender": "неизвестно",
+            "number": "-",
+            "case": "-",
+            "tense": "-",
+            "role": "Предлог"
+        },
+        "morphological_characteristics": {
+            "stem": "у",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "\nскажите мне, почему «похититель»\nосвистан партером?",
+            "увы, потому что бедный автор\nпохитил его у мольера.",
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "увы",
+        "lemma": "увы",
+        "part_of_speech": "междометие",
+        "grammatical_categories": {
+            "gender": "неизвестно",
+            "number": "-",
+            "case": "-",
+            "tense": "-",
+            "role": "Междометие"
+        },
+        "morphological_characteristics": {
+            "stem": "увы",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "увы, потому что бедный автор\nпохитил его у мольера."
+        ]
+    },
+    {
+        "word": "ужасной",
+        "lemma": "ужасный",
+        "part_of_speech": "имя прилагательное (полное)",
+        "grammatical_categories": {
+            "gender": "женский",
+            "number": "единственное",
+            "case": "родительный",
+            "tense": "-",
+            "role": "Определение"
+        },
+        "morphological_characteristics": {
+            "stem": "ужас",
+            "ending": "ной"
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "перевод\n\nпою сей бой, в котором толи одолел,\nгде погиб не один воин, где поль отличился,\nниколая матюрена и прекрасную нитуш,\nрука которой была трофеем ужасной стычки."
+        ]
+    },
+    {
+        "word": "что",
+        "lemma": "что",
+        "part_of_speech": "союз",
+        "grammatical_categories": {
+            "gender": "неизвестно",
+            "number": "-",
+            "case": "-",
+            "tense": "-",
+            "role": "Союз"
+        },
+        "morphological_characteristics": {
+            "stem": "что",
+            "ending": ""
+        },
+        "frequency": {
+            "wordform_frequency": "1/42",
+            "lemma_frequency": "1/42"
+        },
+        "concordance": [
+            "увы, потому что бедный автор\nпохитил его у мольера."
+        ]
+    }
+]
